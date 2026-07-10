@@ -1,0 +1,115 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+% One-page English CV for the JSPS counterpart-PI application.
+% Uses the same Awesome-CV design as the full Spanish CV.
+\PassOptionsToPackage{left=5cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot}{geometry}
+\documentclass[10pt,a4paper]{../awesome-cv}
+\addbibresource{../bibliography.bib}
+
+\geometry{left=1.45cm,top=1.15cm,right=1.45cm,bottom=1.15cm,nohead,nofoot}
+\colorlet{awesome}{awesome-red}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{tabularx}
+
+\photo{../profile.png}
+\name{Jeremías}{Likerman}
+\position{Adjunct Researcher, CONICET{\enskip\cdotp\enskip}Associate Professor, University of Buenos Aires}
+\address{Institute of Andean Studies ``Don Pablo Groeber'' (IDEAN), Argentina}
+\email{jlikerman@uba.ar}
+\googlescholar{HGA3sQQAAAAJ}{Google Scholar}
+\extrainfo{\href{https://orcid.org/0000-0003-3844-2085}{ORCID 0000-0003-3844-2085}}
+
+\makeatletter
+\renewcommand*{\headerpositionstyle}[1]{{\fontsize{8pt}{9.6pt}\bodyfont\scshape\color{awesome} #1}}
+\renewcommand*{\headeraddressstyle}[1]{{\fontsize{8.4pt}{10pt}\headerfont\itshape\color{graytext} #1}}
+\renewcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{9.6pt}\headerfont\color{text} #1}}
+\renewcommand*{\sectionstyle}[1]{{\fontsize{13.2pt}{15.5pt}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\renewcommand*{\subsectionstyle}[1]{{\fontsize{10pt}{12pt}\bodyfont\bfseries\scshape\textcolor{graytext}{#1}}}
+\renewcommand*{\paragraphstyle}{\fontsize{9.4pt}{12.2pt}\bodyfontlight\upshape\color{text}}
+\renewcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{11.2pt}\bodyfontlight\upshape\color{text} #1}}
+\renewcommand{\cvsection}[1]{%
+  \par\vspace{3.2mm}%
+  \sectionstyle{#1}%
+  \phantomsection%
+  \color{gray}\vhrulefill{0.9pt}%
+  \par\nobreak\vspace{2mm}%
+}
+\renewcommand{\cvsubsection}[1]{%
+  \par\vspace{2mm}%
+  \subsectionstyle{#1}%
+  \phantomsection%
+  \par\nobreak\vspace{0.5mm}%
+}
+\renewenvironment{cvparagraph}{%
+  \paragraphstyle
+}{%
+  \par\vspace{2mm}%
+}
+\makeatother
+
+\setlist[itemize]{leftmargin=4mm,topsep=0.5mm,itemsep=0.5mm,parsep=0mm}
+\setlist[enumerate]{leftmargin=4.7mm,topsep=0.7mm,itemsep=0.9mm,parsep=0mm}
+\setlength{\tabcolsep}{0pt}
+\setlength{\footskip}{6mm}
+\setlength{\emergencystretch}{1.5em}
+
+\newcommand{\careerrow}[3]{%
+  \setlength{\extrarowheight}{0pt}%
+  \begin{tabular}{@{}>{\bfseries\color{darktext}\raggedright\arraybackslash}m{2.35cm}@{}>{\raggedright\arraybackslash}m{\dimexpr\textwidth-5.1cm\relax}@{}>{\raggedleft\arraybackslash\itshape\color{graytext}}m{2.75cm}@{}}
+    #1 & #2 & #3
+  \end{tabular}\vspace{0.7mm}%
+}
+
+\begin{document}
+
+\makecvheader
+\vspace{0mm}
+
+\cvsection{Education}
+\careerrow{PhD, 2015}{Geological Sciences, University of Buenos Aires (UBA)}{Argentina}
+\descriptionstyle{Thesis: \emph{Prediction of fracturing on irregular geological surfaces using static methods}. Supervisor: Prof. Ernesto Cristallini.}\par
+\vspace{0.35mm}
+\careerrow{BSc, 2010}{Geological Sciences, University of Buenos Aires (UBA)}{Argentina}
+
+\cvsection{Main Career History}
+\careerrow{May 2026--present}{Associate Professor, Department of Geological Sciences, UBA}{Argentina}
+\descriptionstyle{Teaching: Geostatistics and Geoinformatics.}\par
+\careerrow{2018--present}{Adjunct Researcher (Investigador Adjunto), CONICET--IDEAN}{Argentina}
+\descriptionstyle{Structural geology, geomechanics, geodynamics, natural fractures, and geothermal systems. Research career from 2018; promoted to Investigador Adjunto, November 2023.}\par
+\careerrow{May--Sep 2025}{Visiting Researcher, GEO3BCN--CSIC}{Spain}
+\careerrow{Aug--Sep 2024}{Visiting Researcher, GEO3BCN--CSIC}{Spain}
+\careerrow{2015--2017}{Postdoctoral Researcher, CONICET and Universitat Politècnica de Catalunya}{Argentina/Spain}
+\careerrow{2013--2026}{Teaching appointments, Department of Geological Sciences, UBA}{Argentina}
+\careerrow{2013--2014}{Visiting Doctoral Researcher, Stanford University}{USA}
+
+\cvsection{Major Research Achievements}
+\begin{cvparagraph}\sloppy
+\begin{itemize}
+  \item More than 15 years of research in structural geology and multiscale numerical modelling, integrating field observations, analogue experiments, geomechanics, and 2D/3D simulations.
+  \item Developed predictive approaches for natural-fracture distribution and connectivity in folded structures and energy reservoirs, including the Yacoraite carbonates and the Vaca Muerta Formation.
+  \item Leads and co-leads national and international projects on subduction dynamics, lithospheric deformation, natural fractures, and geothermal systems; coordinator of CONICET--CSIC cooperation on geothermal modelling (2024--2026).
+  \item Supervises early-career researchers and undergraduate, doctoral, and postdoctoral work in structural geology, geomechanics, and numerical modelling.
+\end{itemize}
+\end{cvparagraph}
+
+\cvsection{Selected Recent Major Publications}
+{\fontsize{9pt}{11.1pt}\bodyfontlight\color{text}
+\begin{enumerate}
+  \item Villarroel, M.A., et al., including \textbf{Likerman, J.} (2026). The role of compressional structures in the development of collapse calderas: Insights from analogue models. \emph{Journal of Volcanology and Geothermal Research}, 473, 108582.
+  \item Gianni, G.M., Gallo, L.C., \textbf{Likerman, J.}, et al. (2025). Slab underthrusting is the primary control on flat-slab size. \emph{Science Advances}, 11(28).
+  \item Correa-Luna, C., Yagupsky, D.L., \textbf{Likerman, J.}, \& Barcelona, H. (2025). Impact of large-scale structures on fracture network connectivity: Insights into the Vaca Muerta unconventional play. \emph{Tectonophysics}, 230640.
+  \item Plotek, B., \textbf{Likerman, J.}, \& Cristallini, E. (2024). Geomechanical modeling of fault-propagation folds: A comparative analysis of finite-element and the trishear kinematic model. \emph{Journal of Structural Geology}, 105064.
+  \item Navarrete, C., et al., including \textbf{Likerman, J.} (2024). Massive Jurassic slab break-off revealed by a multidisciplinary reappraisal of the Chon Aike silicic large igneous province. \emph{Earth-Science Reviews}, 249, 104651.
+  \item Gianni, G.M., \textbf{Likerman, J.}, Navarrete, C.R., Gianni, C.R., \& Zlotnik, S. (2023). Ghost-arc geochemical anomaly at a spreading ridge caused by supersized flat subduction. \emph{Nature Communications}, 14, 2083.
+\end{enumerate}
+}
+
+% The complete CV follows the JSPS-oriented first page.
+\input{full_cv}
+
+\end{document}
