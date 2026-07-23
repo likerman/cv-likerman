@@ -119,24 +119,22 @@
 
 \makeatother
 
-% Publicaciones: formato compacto en dos columnas, manteniendo títulos,
-% autoría, revista y año.
-\renewcommand{\printauthor}[1]{%
-  {\fontsize{6.95pt}{7.85pt}\selectfont\color{graytext}\printnames{#1}}%
-}
+% Publicaciones: una referencia por párrafo compacto en dos columnas.
+% Se conservan título, autores, revista, páginas y año.
+\DeclareFieldFormat[article]{title}{#1}
 \DeclareBibliographyDriver{article}{%
-  {\fontsize{7.55pt}{8.55pt}\bodyfont\mdseries\color{darktext}\printfield{title}}%
-  \par\vspace{-0.15mm}%
-  \printauthor{author}%
-  \par\vspace{-0.15mm}%
-  {\fontsize{6.85pt}{7.75pt}\selectfont\addfontfeature{Color=lightgray}\itshape%
+  {\fontsize{7.45pt}{8.4pt}\bodyfont\mdseries\color{darktext}\printfield{title}}%
+  \setunit{\addperiod\space}%
+  {\fontsize{6.85pt}{7.7pt}\selectfont\color{graytext}\printnames{author}}%
+  \setunit{\addperiod\space}%
+  {\fontsize{6.8pt}{7.65pt}\selectfont\addfontfeature{Color=lightgray}\itshape%
     \usebibmacro{journal+issuetitle}%
     \setunit{\space}%
     \printfield{pages}%
     \setunit*{\addcomma\space}%
     \printfield{year}%
   }%
-  \par\vspace{0.45mm}%
+  \par\vspace{0.35mm}%
 }
 
 \begin{document}
