@@ -28,6 +28,7 @@
 \usepackage{tabularx}
 \usepackage{longtable}
 \usepackage{enumitem}
+\usepackage{multicol}
 
 \geometry{left=1.8cm,top=1.35cm,right=1.8cm,bottom=1.7cm,footskip=0.75cm}
 \raggedbottom
@@ -118,28 +119,24 @@
 
 \makeatother
 
-% Publicaciones: jerarquía discreta y espaciado compacto.
+% Publicaciones: formato compacto en dos columnas, manteniendo títulos,
+% autoría, revista y año.
 \renewcommand{\printauthor}[1]{%
-  {\fontsize{8.15pt}{9.8pt}\selectfont\printnames{#1}}%
+  {\fontsize{6.95pt}{7.85pt}\selectfont\color{graytext}\printnames{#1}}%
 }
 \DeclareBibliographyDriver{article}{%
-  {\fontsize{8.45pt}{10.2pt}\bodyfont\mdseries\color{darktext}\printfield{title}}%
-  \newblock%
+  {\fontsize{7.55pt}{8.55pt}\bodyfont\mdseries\color{darktext}\printfield{title}}%
+  \par\vspace{-0.15mm}%
   \printauthor{author}%
-  \par%
-  \newblock%
-  {%
-    \fontsize{7.85pt}{9.3pt}\selectfont\addfontfeature{Color=lightgray}\itshape%
+  \par\vspace{-0.15mm}%
+  {\fontsize{6.85pt}{7.75pt}\selectfont\addfontfeature{Color=lightgray}\itshape%
     \usebibmacro{journal+issuetitle}%
     \setunit{\space}%
     \printfield{pages}%
-    \newunit%
-    \printlist{publisher}%
     \setunit*{\addcomma\space}%
     \printfield{year}%
-    \newunit%
-  }
-  \par\vspace{0.12\baselineskip}
+  }%
+  \par\vspace{0.45mm}%
 }
 
 \begin{document}
@@ -157,8 +154,8 @@
 \input{cv/experience.tex}
 \input{cv/proyectos.tex}
 \input{cv/rrhh.tex}
-\input{cv/biblio.tex}
 \input{cv/becas2.tex}
 \input{cv/skills.tex}
+\input{cv/biblio.tex}
 
 \end{document}
