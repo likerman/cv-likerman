@@ -45,10 +45,11 @@ jobs:
             latexmk biber \
             texlive-xetex texlive-luatex \
             texlive-latex-extra texlive-fonts-extra \
-            texlive-lang-spanish \
-            fonts-font-awesome fontconfig
+            texlive-fonts-recommended texlive-lang-spanish \
+            fonts-font-awesome fonts-urw-base35 fontconfig
           fc-cache -f -v
           fc-match FontAwesome
+          kpsewhich pzdr.tfm
 
       - name: Compilar CV en español
         run: latexmk -xelatex -file-line-error -halt-on-error -interaction=nonstopmode cv.tex
