@@ -3,18 +3,15 @@ name: Publicar CV bilingüe
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
       - "_quarto.yml"
       - "index.qmd"
       - "en/**"
       - "styles.css"
       - "profile.png"
-      - "cv.tex"
-      - "cv/**"
-      - "bibliography.bib"
-      - "awesome-cv.cls"
-      - "fonts/**"
+      - "cv.pdf"
       - "CV_JSPS_English/**"
       - ".github/workflows/publish.yml"
 
@@ -34,22 +31,8 @@ jobs:
       - name: Descargar repositorio
         uses: actions/checkout@v6
 
-      - name: Configurar Quarto y TinyTeX
+      - name: Configurar Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          tinytex: true
-
-      - name: Instalar dependencias LaTeX
-        run: |
-          tlmgr install collection-latexextra collection-fontsrecommended collection-mathscience
-          tlmgr install biblatex biber fontawesome sourcesanspro
-
-      - name: Compilar CV en español
-        run: |
-          xelatex -interaction=nonstopmode cv.tex
-          biber cv
-          xelatex -interaction=nonstopmode cv.tex
-          xelatex -interaction=nonstopmode cv.tex
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
@@ -57,7 +40,7 @@ jobs:
       - name: Renderizar sitio
         run: quarto render
 
-      - name: Subir artefacto de Pages
+      - name: Subir sitio para GitHub Pages
         uses: actions/upload-pages-artifact@v4
         with:
           path: _site
