@@ -1,0 +1,43 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - Likerman_ES_2026.pdf
+    - CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
+
+website:
+  title: "Jeremías Likerman"
+  favicon: profile.png
+  search: false
+  navbar:
+    background: "#17324d"
+    foreground: "#ffffff"
+    left:
+      - text: "CV en español"
+        href: index.qmd
+      - text: "English CV"
+        href: en/index.qmd
+    right:
+      - icon: file-earmark-pdf
+        text: "PDF ES"
+        href: Likerman_ES_2026.pdf
+      - icon: file-earmark-pdf
+        text: "PDF EN"
+        href: CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
+      - icon: github
+        href: https://github.com/likerman
+      - text: "ORCID"
+        href: https://orcid.org/0000-0003-3844-2085
+  page-footer:
+    left: "Jeremías Likerman · IDEAN (UBA–CONICET)"
+    right: "Curriculum académico"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-location: right
+    smooth-scroll: true
+    link-external-newwindow: true
+    lang: es

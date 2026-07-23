@@ -1,0 +1,65 @@
+:root {
+  --cv-navy: #17324d;
+  --cv-blue: #2d638c;
+  --cv-sand: #f3f0e9;
+  --cv-ink: #24313b;
+}
+
+body {
+  color: var(--cv-ink);
+}
+
+.navbar {
+  box-shadow: 0 2px 12px rgba(23, 50, 77, 0.18);
+}
+
+.quarto-about-jolla .about-image {
+  border: 5px solid white;
+  box-shadow: 0 8px 28px rgba(23, 50, 77, 0.22);
+}
+
+h1, h2, h3 {
+  color: var(--cv-navy);
+}
+
+h2 {
+  margin-top: 2.8rem;
+  border-bottom: 2px solid #dce5eb;
+  padding-bottom: 0.45rem;
+}
+
+.callout-note {
+  border-left-color: var(--cv-blue) !important;
+  background: #f4f8fb;
+}
+
+.grid > div {
+  padding: 0.4rem 1rem 0.7rem;
+  border-left: 3px solid #dce5eb;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  background: var(--cv-navy);
+  border-color: var(--cv-navy);
+}
+
+.btn-primary:hover {
+  background: var(--cv-blue);
+  border-color: var(--cv-blue);
+}
+
+.page-footer {
+  background: var(--cv-sand);
+}
+
+@media (max-width: 768px) {
+  .quarto-about-jolla {
+    text-align: center;
+  }
+
+  .grid > div {
+    border-left: 0;
+    border-top: 3px solid #dce5eb;
+  }
+}
