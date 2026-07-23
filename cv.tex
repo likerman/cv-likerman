@@ -1,8 +1,8 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-\PassOptionsToPackage{left=5cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot}{geometry}
-\documentclass[11pt, a4paper]{awesome-cv}
+\PassOptionsToPackage{left=1.8cm,top=1.35cm,right=1.8cm,bottom=1.7cm,foot=0.8cm}{geometry}
+\documentclass[10pt,a4paper]{awesome-cv}
 \addbibresource{bibliography.bib}
 
 \fontdir[fonts/]
@@ -25,31 +25,113 @@
 
 \usepackage[spanish]{babel}
 \usepackage{needspace}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{enumitem}
 
-% Jerarquía tipográfica del CV: secciones, subsecciones, entradas y texto.
+\geometry{left=1.8cm,top=1.35cm,right=1.8cm,bottom=1.7cm,footskip=0.75cm}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+
+%-------------------------------------------------------------------------------
+% SISTEMA DE MAQUETACIÓN MULTIPÁGINA
+%-------------------------------------------------------------------------------
+% La plantilla original agrupaba secciones enteras en tablas indivisibles.
+% Estas redefiniciones permiten que el contenido fluya entre páginas sin dejar
+% grandes huecos, conservando la identidad visual de Awesome-CV.
 \makeatletter
-\renewcommand*{\sectionstyle}[1]{{\fontsize{15.5pt}{18pt}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
-\renewcommand*{\subsectionstyle}[1]{{\fontsize{10.5pt}{12.5pt}\bodyfont\bfseries\scshape\textcolor{graytext}{#1}}}
-\renewcommand*{\paragraphstyle}{\fontsize{9pt}{12.5pt}\bodyfontlight\upshape\color{text}}
-\renewcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{12pt}\bodyfont\bfseries\color{darktext} #1}}
-\renewcommand*{\entrypositionstyle}[1]{{\fontsize{8.2pt}{10pt}\bodyfont\scshape\color{graytext} #1}}
-\renewcommand*{\entrydatestyle}[1]{{\fontsize{8.2pt}{10pt}\bodyfontlight\slshape\color{graytext} #1}}
-\renewcommand*{\entrylocationstyle}[1]{{\fontsize{8.7pt}{10.5pt}\bodyfontlight\slshape\color{awesome} #1}}
-\renewcommand*{\descriptionstyle}[1]{{\fontsize{8.9pt}{12pt}\bodyfontlight\upshape\color{text} #1}}
+
+\renewcommand*{\sectionstyle}[1]{{\fontsize{14.2pt}{16.5pt}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\renewcommand*{\subsectionstyle}[1]{{\fontsize{10pt}{11.8pt}\bodyfont\bfseries\scshape\textcolor{graytext}{#1}}}
+\renewcommand*{\paragraphstyle}{\fontsize{8.8pt}{11.3pt}\bodyfontlight\upshape\color{text}}
+\renewcommand*{\entrytitlestyle}[1]{{\fontsize{9.5pt}{11.2pt}\bodyfont\bfseries\color{darktext} #1}}
+\renewcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{9.5pt}\bodyfont\scshape\color{graytext} #1}}
+\renewcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{9.5pt}\bodyfontlight\slshape\color{graytext} #1}}
+\renewcommand*{\entrylocationstyle}[1]{{\fontsize{8.3pt}{9.8pt}\bodyfontlight\slshape\color{awesome} #1}}
+\renewcommand*{\descriptionstyle}[1]{{\fontsize{8.65pt}{11pt}\bodyfontlight\upshape\color{text} #1}}
+
+\renewcommand{\cvsection}[1]{%
+  \par\Needspace{4\baselineskip}%
+  \addvspace{4.2mm}%
+  \sectionstyle{#1}\par\nobreak%
+  \vspace{-0.4mm}%
+  {\color{gray}\hrule height 0.8pt}%
+  \vspace{1.2mm}%
+}
+
+\renewcommand{\cvsubsection}[1]{%
+  \par\Needspace{3.5\baselineskip}%
+  \addvspace{2.1mm}%
+  \subsectionstyle{#1}\par\nobreak%
+  \vspace{0.45mm}%
+}
+
+\renewenvironment{cvparagraph}{%
+  \paragraphstyle
+}{%
+  \par\vspace{1mm}%
+}
+
+% Cada entrada conserva juntas sus dos líneas de encabezado, pero el texto de
+% descripción queda fuera de la tabla y puede fluir naturalmente.
+\renewenvironment{cventries}{%
+  \par\vspace{0.3mm}%
+}{%
+  \par\vspace{0.2mm}%
+}
+
+\renewcommand*{\cventry}[5]{%
+  \par\Needspace{4.5\baselineskip}%
+  \addvspace{0.85mm}%
+  \noindent\begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{3.75cm}@{}}
+    \entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+    \entrypositionstyle{#1} & \entrydatestyle{#4}
+  \end{tabularx}%
+  \ifempty{#5}{}{%
+    \vspace{-0.35mm}%
+    \descriptionstyle{#5}\par%
+  }%
+  \vspace{0.35mm}%
+}
+
+\renewenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=1.55em,topsep=0.15mm,itemsep=0pt,parsep=0pt,partopsep=0pt]
+  \fontsize{8.65pt}{10.9pt}\bodyfontlight\color{text}
+}{%
+  \end{itemize}%
+  \vspace{-0.25mm}%
+}
+
+% Proyectos, becas y distinciones se maquetan con longtable para permitir
+% cortes entre filas. La tabla completa ya no salta a la página siguiente.
+\setlength{\LTpre}{0.4mm}
+\setlength{\LTpost}{0.4mm}
+\renewenvironment{cvhonors}{%
+  \begin{longtable}{@{}p{1.35cm}p{\dimexpr\textwidth-4.25cm\relax}>{\raggedleft\arraybackslash}p{2.9cm}@{}}
+}{%
+  \end{longtable}%
+}
+
+\renewcommand*{\cvhonor}[4]{%
+  \honordatestyle{#4} &
+  \raggedright\honorpositionstyle{#1}\ifempty{#2}{}{\par\honortitlestyle{#2}} &
+  \honorlocationstyle{#3}\tabularnewline[0.9mm]
+}
+
 \makeatother
 
-% Publicaciones: títulos más discretos para que no compitan con secciones y cargos.
+% Publicaciones: jerarquía discreta y espaciado compacto.
 \renewcommand{\printauthor}[1]{%
-  {\fontsize{8.4pt}{10.2pt}\selectfont\printnames{#1}}%
+  {\fontsize{8.15pt}{9.8pt}\selectfont\printnames{#1}}%
 }
 \DeclareBibliographyDriver{article}{%
-  {\fontsize{8.7pt}{10.5pt}\bodyfont\mdseries\color{darktext}\printfield{title}}%
+  {\fontsize{8.45pt}{10.2pt}\bodyfont\mdseries\color{darktext}\printfield{title}}%
   \newblock%
   \printauthor{author}%
   \par%
   \newblock%
   {%
-    \fontsize{8pt}{9.6pt}\selectfont\addfontfeature{Color=lightgray}\itshape%
+    \fontsize{7.85pt}{9.3pt}\selectfont\addfontfeature{Color=lightgray}\itshape%
     \usebibmacro{journal+issuetitle}%
     \setunit{\space}%
     \printfield{pages}%
@@ -59,7 +141,7 @@
     \printfield{year}%
     \newunit%
   }
-  \par\vspace{0.2\baselineskip}
+  \par\vspace{0.12\baselineskip}
 }
 
 \begin{document}
@@ -71,7 +153,7 @@
   {Jeremías Likerman~~~·~~~Curriculum Vitae}
   {\thepage}
 
-\vspace{.25cm}
+\vspace{1.2mm}
 \input{cv/summary}
 \input{cv/education.tex}
 \input{cv/experience.tex}
