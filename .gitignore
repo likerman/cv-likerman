@@ -13,3 +13,7 @@
 *.synctex.gz
 *.toc
 texput.log
+
+# Quarto build artifacts
+/.quarto/
+/_site/
