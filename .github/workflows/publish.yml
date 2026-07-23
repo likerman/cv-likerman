@@ -1,0 +1,74 @@
+name: Publicar CV bilingüe
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "_quarto.yml"
+      - "index.qmd"
+      - "en/**"
+      - "styles.css"
+      - "profile.png"
+      - "cv.tex"
+      - "cv/**"
+      - "bibliography.bib"
+      - "awesome-cv.cls"
+      - "fonts/**"
+      - "CV_JSPS_English/**"
+      - ".github/workflows/publish.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v6
+
+      - name: Configurar Quarto y TinyTeX
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
+
+      - name: Instalar dependencias LaTeX
+        run: |
+          tlmgr install collection-latexextra collection-fontsrecommended collection-mathscience
+          tlmgr install biblatex biber fontawesome sourcesanspro
+
+      - name: Compilar CV en español
+        run: |
+          xelatex -interaction=nonstopmode cv.tex
+          biber cv
+          xelatex -interaction=nonstopmode cv.tex
+          xelatex -interaction=nonstopmode cv.tex
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Renderizar sitio
+        run: quarto render
+
+      - name: Subir artefacto de Pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
