@@ -1,0 +1,159 @@
+---
+title: "Jeremías Likerman"
+lang: es
+description: "Curriculum vitae académico bilingüe de Jeremías Likerman, investigador del CONICET y profesor de la Universidad de Buenos Aires."
+page-layout: full
+---
+
+::: {.hero}
+:::: {.columns}
+::: {.column width="24%"}
+![](profile.png){fig-alt="Jeremías Likerman"}
+:::
+
+::: {.column width="76%"}
+# Dr. Jeremías Likerman
+
+<p class="subtitle">Investigador adjunto del CONICET · Profesor adjunto de la Universidad de Buenos Aires · Coordinador institucional del IDEAN</p>
+
+Geólogo especializado en **geología estructural, geomecánica y modelado numérico multiescala**. Investiga procesos geodinámicos, geotérmicos y geomecánicos en los Andes y en reservorios energéticos mediante modelos bidimensionales y tridimensionales, trabajo de campo y herramientas de computación de alto rendimiento.
+
+::: {.cv-actions}
+[CV en español (PDF)](cv.pdf){.btn .btn-primary}
+[CV in English (PDF)](CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf){.btn .btn-outline-primary}
+[Google Scholar](https://scholar.google.com/citations?user=HGA3sQQAAAAJ){.btn .btn-outline-secondary}
+[ORCID](https://orcid.org/0000-0003-3844-2085){.btn .btn-outline-secondary}
+:::
+
+[jlikerman@uba.ar](mailto:jlikerman@uba.ar) · Buenos Aires, Argentina
+:::
+::::
+:::
+
+::: {.metric-grid}
+::: {.metric}
+**15+ años**
+Investigación y trabajo de campo
+:::
+::: {.metric}
+**19**
+Artículos con referato
+:::
+::: {.metric}
+**11**
+Tesis de licenciatura dirigidas o codirigidas
+:::
+::: {.metric}
+**4**
+Plataformas principales de modelado numérico
+:::
+:::
+
+## Perfil de investigación
+
+Su investigación combina geología estructural, geomecánica, geodinámica y geotermia para estudiar:
+
+- dinámica de zonas de subducción y geometrías de *flat slab*;
+- deformación cortical y evolución tectónica de los Andes;
+- sistemas volcánicos con potencial geotérmico;
+- fracturación natural e inducida en reservorios energéticos, con énfasis en Vaca Muerta;
+- desarrollo de flujos de trabajo reproducibles para modelos 2D/3D en infraestructura HPC.
+
+## Cargos actuales
+
+::: {.timeline-item}
+**Investigador adjunto — CONICET–IDEAN**  
+2018–presente. Promoción a Investigador Adjunto en noviembre de 2023. Líneas principales: predicción de fracturas, modelado geodinámico y evaluación numérica del potencial geotérmico.
+:::
+
+::: {.timeline-item}
+**Profesor adjunto — Departamento de Ciencias Geológicas, UBA**  
+Mayo de 2026–presente. Docencia en Geoestadística y Geoinformática.
+:::
+
+::: {.timeline-item}
+**Coordinador institucional — IDEAN, CONICET–UBA**  
+Septiembre de 2025–presente. Integrante del Consejo Directivo desde abril de 2024.
+:::
+
+## Formación
+
+::: {.timeline-item}
+**Beca posdoctoral, CONICET y Universitat Politècnica de Catalunya** · 2015–2017  
+Evolución térmica de la litosfera oceánica. Dirección: Ernesto Cristallini y Sergio Zlotnik.
+:::
+
+::: {.timeline-item}
+**Doctorado en Ciencias Geológicas, Universidad de Buenos Aires** · 2010–2015  
+Tesis sobre predicción del fracturamiento en superficies geológicas irregulares mediante métodos estáticos.
+:::
+
+::: {.timeline-item}
+**Licenciatura en Ciencias Geológicas, Universidad de Buenos Aires** · 2005–2010  
+Tesis sobre la geología y estructura del anticlinal compuesto Tres Cruces, Jujuy.
+:::
+
+::: {.timeline-item}
+**Investigador visitante, Stanford University** · 2013  
+Formación en Geología Estructural y MATLAB aplicado a Geociencias.
+:::
+
+## Proyectos seleccionados
+
+- **AECT-2026-1-0080** — Modelos tridimensionales de transferencia de esfuerzos entre segmentos de *flat slab* andinos. Investigador responsable, 2026.
+- **PIP 11220250100817CO** — Análisis tectónico-estructural mediante modelado análogo y numérico: contribuciones a los recursos energéticos. Co-investigador responsable, 2026–2029.
+- **AECT-2025-1-0009** — Potencial geotérmico de zonas volcánicas. Investigador responsable, 2025.
+- **Fundación Williams** — Controles estructurales en sistemas volcánicos e intrusiones magmáticas. Co-investigador responsable, 2025–2026.
+- **LINCGL2024** — Evaluación termomecánica del potencial geotérmico en zonas volcánicas. Investigador responsable, 2024–2026.
+- **AECT-2024-2-0027** — Modelado de zonas de subducción y plumas mantélicas. Investigador responsable, 2024.
+- **GEO3BCN–CSIC** — Geodinámica de la microplaca Adria, desde el manto hasta la superficie. Co-investigador responsable, 2023.
+- **AECT-2022-3-0023** — Modelado geodinámico de zonas de subducción. Investigador responsable, 2022.
+
+## Formación de recursos humanos
+
+- Dirección de la investigadora asistente **Berenice Plotek** desde agosto de 2025.
+- Codirección posdoctoral de **Berenice Plotek** (2024), sobre pliegues por propagación de falla.
+- Codirección doctoral de **Clara Correa Luna** (2023), sobre fracturación natural en la Formación Vaca Muerta.
+- Dirección o codirección de once tesis de licenciatura, concluidas o en curso, sobre tectónica, geotermia, modelado numérico, geomorfología y geología estructural.
+
+## Publicaciones con referato
+
+1. Villarroel, M. A. et al., incluyendo **Likerman, J.** (2026). *The role of compressional structures in the development of collapse calderas: Insights from analogue models*. Journal of Volcanology and Geothermal Research.
+2. Gianni, G. M. et al., incluyendo **Likerman, J.** (2025). *Slab underthrusting is the primary control on flat slab size*. Science Advances, 11(28).
+3. Correa-Luna, C., Yagupsky, D. L., **Likerman, J.**, & Barcelona, H. (2025). *Impact of large-scale structures on fracture network connectivity: Insights into the Vaca Muerta unconventional play*. Tectonophysics.
+4. Plotek, B., **Likerman, J.**, & Cristallini, E. (2024). *Geomechanical modeling of fault-propagation folds*. Journal of Structural Geology.
+5. Navarrete, C. et al., incluyendo **Likerman, J.** (2024). *Massive Jurassic slab break-off revealed by a multidisciplinary reappraisal of the Chon Aike silicic large igneous province*. Earth-Science Reviews.
+6. Gianni, G. M., **Likerman, J.**, Navarrete, C. R., Gianni, C. R., & Zlotnik, S. (2023). *Ghost-arc geochemical anomaly at a spreading ridge caused by supersized flat subduction*. Nature Communications.
+7. Plotek, B. et al., incluyendo **Likerman, J.** (2022). *Kinematics of fault-propagation folding*. Journal of Structural Geology.
+8. Correa-Luna, C., Yagupsky, D. L., **Likerman, J.**, & Barcelona, H. (2022). *Natural fracture characterization of the Los Catutos Member*. Journal of South American Earth Sciences.
+9. **Likerman, J.**, Zlotnik, S., & Li, C.-F. (2021). *The effects of small-scale convection in the shallow lithosphere of the North Atlantic*. Geophysical Journal International.
+10. García Morabito, E. et al., incluyendo **Likerman, J.** (2021). *The influence of climate on the dynamics of mountain building within the Northern Patagonian Andes*. Tectonics.
+11. Correa Luna, C., Yagupsky, D. L., & **Likerman, J.** (2019). *Fracture network analysis of Yacoraite Formation in the Tres Cruces sub-basin*. Journal of South American Earth Sciences.
+12. Jara, P. et al., incluyendo **Likerman, J.** (2017). *Closure type effects on the structural pattern of an inverted extensional basin of variable width*. Journal of South American Earth Sciences.
+13. Gianni, G. M. et al., incluyendo **Likerman, J.** (2017). *Cenozoic intraplate tectonics in Central Patagonia*. Tectonophysics.
+14. Terrizzano, C. M. et al., incluyendo **Likerman, J.** (2017). *Climatic and tectonic forcing on alluvial fans in the Southern Central Andes*. Quaternary Science Reviews.
+15. Cilona, A., Aydin, A., **Likerman, J.**, Parker, B., & Cherry, J. (2016). *Structural and statistical characterization of joints and multi-scale faults*. Journal of Structural Geology.
+16. Tobal, J. E. et al., incluyendo **Likerman, J.** (2015). *Middle to late Miocene extensional collapse of the North Patagonian Andes*. Tectonophysics.
+17. Ghiglione, M. C. et al., incluyendo **Likerman, J.** (2014). *Geodynamic context for the deposition of coarse-grained deep-water axial channel systems in the Patagonian Andes*. Basin Research.
+18. Jara, P. et al., incluyendo **Likerman, J.** (2014). *Role of basin width variation in tectonic inversion*. Geological Society, London, Special Publications.
+19. **Likerman, J.**, Burlando, J. F., Cristallini, E. O., & Ghiglione, M. C. (2013). *Along-strike structural variations in the Southern Patagonian Andes*. Tectonophysics.
+
+## Becas y distinciones
+
+- Beca de investigación JSPS en Kobe University, Japón (2027).
+- Viaje de campo SZNet 2025 Chile, NSF–SZ4D (2025).
+- Beca de movilidad AUIP (2022).
+- Estadía internacional de investigación CONICET (2016).
+- Beca posdoctoral CONICET (2015–2017).
+- Beca Fulbright–Fundación Bunge y Born para estadía doctoral en Stanford (2013).
+- Becas doctorales CONICET Tipo I y II (2010–2015).
+
+## Competencias
+
+**Modelado numérico:** Underworld2, ASPECT, GOLEM y LaMEM; modelos termomecánicos 2D/3D; MPI y flujos de trabajo HPC.
+
+**Programación y reproducibilidad:** Python, R, MATLAB, LaTeX, Git y documentación científica reproducible.
+
+**Análisis geoespacial:** QGIS, GMT y PostGIS; cartografía geológica, interpretación sísmica, análisis estructural y métodos UAV.
+
+**Idiomas:** español nativo, inglés C2, italiano A2 y catalán A2.
