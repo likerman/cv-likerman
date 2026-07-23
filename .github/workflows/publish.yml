@@ -34,11 +34,14 @@ jobs:
       - name: Configurar Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Configurar GitHub Pages
-        uses: actions/configure-pages@v5
+      - name: Verificar Quarto
+        run: quarto check
 
       - name: Renderizar sitio
-        run: quarto render
+        run: quarto render --log-level info
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v6
 
       - name: Subir sitio para GitHub Pages
         uses: actions/upload-pages-artifact@v4
