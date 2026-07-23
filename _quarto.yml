@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - profile.png
+    - cv.pdf
+    - CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
+
+website:
+  title: "Jeremías Likerman"
+  site-url: "https://likerman.github.io/cv-likerman/"
+  favicon: profile.png
+  navbar:
+    background: primary
+    left:
+      - text: "Español"
+        href: index.qmd
+      - text: "English"
+        href: en/index.qmd
+    right:
+      - icon: github
+        href: https://github.com/likerman
+        aria-label: GitHub
+  page-footer:
+    center: "Jeremías Likerman · IDEAN (CONICET–UBA)"
+  open-graph: true
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.css
+    toc: true
+    toc-location: right
+    smooth-scroll: true
+    link-external-newwindow: true
+    anchor-sections: true
+
+execute:
+  freeze: auto
