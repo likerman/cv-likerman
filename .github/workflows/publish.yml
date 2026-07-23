@@ -38,24 +38,24 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Instalar TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            latexmk biber \
+            texlive-xetex texlive-luatex \
+            texlive-latex-extra texlive-fonts-extra \
+            texlive-lang-spanish
+
       - name: Compilar CV en español
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: cv.tex
-          latexmk_use_xelatex: true
-          os: debian
+        run: latexmk -xelatex -file-line-error -halt-on-error -interaction=nonstopmode cv.tex
 
       - name: Compilar CV en inglés
-        uses: xu-cheng/latex-action@v4
-        with:
-          working_directory: CV_JSPS_English
-          root_file: main.tex
-          latexmk_use_lualatex: true
-          os: debian
+        working-directory: CV_JSPS_English
+        run: latexmk -lualatex -file-line-error -halt-on-error -interaction=nonstopmode main.tex
 
       - name: Preparar y verificar los PDF
         run: |
-          sudo chown -R "$(id -u):$(id -g)" "$GITHUB_WORKSPACE"
           cp CV_JSPS_English/main.pdf CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
           test -s cv.pdf
           test -s CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
