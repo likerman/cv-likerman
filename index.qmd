@@ -1,0 +1,99 @@
+---
+title: "Jeremías Likerman"
+subtitle: "Investigador Adjunto del CONICET · Profesor Adjunto de la Universidad de Buenos Aires"
+image: profile.png
+about:
+  template: jolla
+  links:
+    - icon: envelope
+      text: Correo
+      href: mailto:jlikerman@uba.ar
+    - icon: journal-text
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=HGA3sQQAAAAJ
+    - icon: link-45deg
+      text: ORCID
+      href: https://orcid.org/0000-0003-3844-2085
+    - icon: github
+      text: GitHub
+      href: https://github.com/likerman
+---
+
+::: {.callout-note appearance="simple" icon=false}
+Doctor en Geología especializado en **geología estructural, geomecánica y modelado numérico multiescala**. Integro observaciones de campo, modelado análogo y simulaciones 2D/3D para estudiar la geodinámica andina, la deformación cortical, los sistemas volcánicos con potencial geotérmico y la fracturación de reservorios energéticos.
+:::
+
+[Descargar CV completo en español](Likerman_ES_2026.pdf){.btn .btn-primary} [View CV in English](en/index.qmd){.btn .btn-outline-primary}
+
+## Cargos actuales
+
+- **Investigador Adjunto**, CONICET–IDEAN, Universidad de Buenos Aires. Carrera del Investigador desde 2018; promoción a Investigador Adjunto en noviembre de 2023.
+- **Profesor Adjunto**, Departamento de Ciencias Geológicas, FCEN–UBA, desde junio de 2026. Asignaturas: Geoestadística y Geoinformática.
+- **Coordinador institucional del IDEAN**, desde septiembre de 2025; integrante del Consejo Directivo desde abril de 2024.
+
+## Líneas de investigación
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+### Geodinámica andina
+
+Modelado termo-mecánico 2D y 3D de zonas de subducción, segmentos de *flat slab*, interacción manto–litósfera, deformación de la placa superior y evolución orogénica.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Geotermia volcánica
+
+Evaluación del potencial geotérmico de Copahue, Domuyo, Socompa y Cerro Blanco mediante modelos térmicos, termo-hidráulicos y estructurales.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Geología estructural y geomecánica
+
+Predicción de fracturas, pliegues por propagación de falla, inversión tectónica y conectividad de redes de fracturas naturales.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Modelado científico y HPC
+
+Desarrollo de modelos con Underworld2/3, ASPECT, GOLEM y LaMEM; flujos reproducibles y simulaciones en infraestructura de alto rendimiento.
+:::
+:::
+
+## Formación
+
+- **Doctor en Ciencias Geológicas**, Universidad de Buenos Aires, 2015.
+- **Licenciado en Ciencias Geológicas**, Universidad de Buenos Aires, 2010.
+- **Beca posdoctoral CONICET–Universitat Politècnica de Catalunya**, 2015–2017.
+- **Investigador visitante**, Stanford University, 2013.
+- Estadías de investigación en UPC y GEO3BCN–CSIC.
+
+## Proyectos seleccionados
+
+- **PIP 11220250100817CO, CONICET** — *Análisis tectónico-estructural mediante modelado análogo y numérico: contribuciones a los recursos energéticos*. Co-investigador responsable, 2026–2029.
+- **Fundación Williams** — *Deformación cuaternaria en el Sistema de Famatina*. Co-investigador, 2025–2026.
+- **LINCGL2024** — Estimación del potencial geotérmico en zonas volcánicas mediante modelos numéricos termomecánicos. Investigador responsable, 2024–2026.
+- **PICT 2021-I-A-01210** — *Traverse structures in the Andean orogen*. Integrante, 2023–2027.
+- Proyectos AECT en MareNostrum/BSC sobre subducción, plumas mantélicas y geotermia, 2022–2026.
+
+## Publicaciones seleccionadas
+
+1. Villarroel, M. A. et al., incluyendo **Likerman, J.** (2026). *The role of compressional structures in the development of collapse calderas: Insights from analogue models*. **Journal of Volcanology and Geothermal Research**, 473, 108582.
+2. Gianni, G. M., Gallo, L. C., **Likerman, J.**, et al. (2025). *Slab underthrusting is the primary control on flat-slab size*. **Science Advances**, 11(28).
+3. Correa-Luna, C., Yagupsky, D. L., **Likerman, J.** y Barcelona, H. (2025). *Impact of large-scale structures on fracture network connectivity: Insights into the Vaca Muerta unconventional play*. **Tectonophysics**, 230640.
+4. Plotek, B., **Likerman, J.** y Cristallini, E. (2024). *Geomechanical modeling of fault-propagation folds*. **Journal of Structural Geology**, 105064.
+5. Gianni, G. M., **Likerman, J.**, Navarrete, C. R., Gianni, C. R. y Zlotnik, S. (2023). *Ghost-arc geochemical anomaly at a spreading ridge caused by supersized flat subduction*. **Nature Communications**, 14, 2083.
+6. **Likerman, J.**, Zlotnik, S. y Li, C.-F. (2021). *The effects of small-scale convection in the shallow lithosphere of the North Atlantic*. **Geophysical Journal International**, 227(3), 1512–1522.
+
+[Ver lista completa en Google Scholar](https://scholar.google.com/citations?user=HGA3sQQAAAAJ){.btn .btn-outline-secondary}
+
+## Formación de recursos humanos
+
+Dirección y codirección de una investigadora asistente, una beca posdoctoral, una tesis doctoral finalizada y once trabajos finales de licenciatura, incluidos proyectos en geomecánica, tectónica activa, geotermia y modelado numérico.
+
+## Cooperación internacional
+
+Colaboraciones con GEO3BCN–CSIC, LaCaN–UPC, Barcelona Supercomputing Center, GFZ Potsdam, Kobe University y otros grupos internacionales. Beca de investigación JSPS en Kobe University para 2027, con el Prof. Shoichi Yoshioka.
+
+## Herramientas
+
+**Modelado:** Underworld2/3, ASPECT, GOLEM, LaMEM · **Programación:** Python, R, MATLAB, LaTeX · **Geoespacial:** QGIS, GMT, PostGIS · **Métodos:** modelado análogo, PIV, análisis estructural, cartografía geológica y flujos HPC.
