@@ -43,13 +43,15 @@ jobs:
         with:
           root_file: cv.tex
           latexmk_use_xelatex: true
+          os: debian
 
       - name: Compilar CV en inglés
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: CV_JSPS_English/main.tex
-          work_in_root_file_dir: true
+          working_directory: CV_JSPS_English
+          root_file: main.tex
           latexmk_use_lualatex: true
+          os: debian
 
       - name: Preparar y verificar los PDF
         run: |
@@ -57,8 +59,7 @@ jobs:
           cp CV_JSPS_English/main.pdf CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
           test -s cv.pdf
           test -s CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
-          pdfinfo cv.pdf | grep -E '^(Pages|File size):'
-          pdfinfo CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf | grep -E '^(Pages|File size):'
+          ls -lh cv.pdf CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
 
       - name: Guardar los PDF actualizados en el repositorio
         run: |
