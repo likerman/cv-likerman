@@ -87,10 +87,8 @@
     \entrytitlestyle{#2} & \entrylocationstyle{#3} \\
     \entrypositionstyle{#1} & \entrydatestyle{#4}
   \end{tabularx}%
-  \ifempty{#5}{}{%
-    \vspace{-0.35mm}%
-    \descriptionstyle{#5}\par%
-  }%
+  \vspace{-0.35mm}%
+  \descriptionstyle{#5}\par%
   \vspace{0.35mm}%
 }
 
@@ -114,7 +112,7 @@
 
 \renewcommand*{\cvhonor}[4]{%
   \honordatestyle{#4} &
-  \raggedright\honorpositionstyle{#1}\ifempty{#2}{}{\par\honortitlestyle{#2}} &
+  \raggedright\honorpositionstyle{#1}\par\honortitlestyle{#2} &
   \honorlocationstyle{#3}\tabularnewline[0.9mm]
 }
 
