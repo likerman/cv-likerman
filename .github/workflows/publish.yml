@@ -10,7 +10,11 @@ on:
       - "en/**"
       - "styles.css"
       - "profile.png"
-      - "cv.pdf"
+      - "cv.tex"
+      - "cv/**"
+      - "bibliography.bib"
+      - "awesome-cv.cls"
+      - "fonts/**"
       - "CV_JSPS_English/**"
       - ".github/workflows/publish.yml"
 
@@ -30,8 +34,22 @@ jobs:
       - name: Descargar repositorio
         uses: actions/checkout@v6
 
-      - name: Configurar Quarto
+      - name: Configurar Quarto y TinyTeX
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
+
+      - name: Instalar dependencias LaTeX
+        run: |
+          tlmgr install collection-latexextra collection-fontsrecommended collection-mathscience
+          tlmgr install biblatex biber fontawesome sourcesanspro
+
+      - name: Compilar CV en español
+        run: |
+          xelatex -interaction=nonstopmode cv.tex
+          biber cv
+          xelatex -interaction=nonstopmode cv.tex
+          xelatex -interaction=nonstopmode cv.tex
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
