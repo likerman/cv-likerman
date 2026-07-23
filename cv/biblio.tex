@@ -1,22 +1,17 @@
 %-------------------------------------------------------------------------------
-%	SECTION TITLE
+% SECTION TITLE
 %-------------------------------------------------------------------------------
-\cvsection{Publicaciones}
+\cvsection{Publicaciones con referato}
 
-
-%-------------------------------------------------------------------------------
-%	CONTENT
-%-------------------------------------------------------------------------------
-
-\printbibsection{article}{Publicaciones con referato}% \begin{refsection}
-%   \nocite{*}
-%   \printbibliography[sorting=chronological, type=inproceedings, title={international conferencess}, notkeyword={argentina}, heading=subbibliography]
-% \end{refsection}
-% \begin{refsection}
-%   \nocite{*}
-%   \printbibliography[sorting=chronological, type=inproceedings, title={national conferences}, keyword={argentina}, heading=subbibliography]
-% \end{refsection}
-%\printbibsection{mis c}{other publications}
-%\pagebreak
-
-% \printbibsection{report}{technical reports}
+\setlength{\columnsep}{5.5mm}
+\setlength{\columnseprule}{0pt}
+\begin{multicols}{2}
+\raggedcolumns
+\sloppy
+\begin{refsection}
+  \nocite{*}
+  \setlength{\bibitemsep}{0pt}
+  \setlength{\bibparsep}{0pt}
+  \printbibliography[sorting=chronological,type=article,heading=none]
+\end{refsection}
+\end{multicols}
