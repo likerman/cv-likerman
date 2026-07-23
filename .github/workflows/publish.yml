@@ -11,12 +11,17 @@ on:
       - "en/**"
       - "styles.css"
       - "profile.png"
-      - "cv.pdf"
-      - "CV_JSPS_English/**"
+      - "cv.tex"
+      - "cv/**"
+      - "bibliography.bib"
+      - "awesome-cv.cls"
+      - "fonts/**"
+      - "CV_JSPS_English/*.tex"
+      - "CV_JSPS_English/fonts"
       - ".github/workflows/publish.yml"
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -30,6 +35,40 @@ jobs:
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Compilar CV en español
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: cv.tex
+          latexmk_use_xelatex: true
+
+      - name: Compilar CV en inglés
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: CV_JSPS_English/main.tex
+          work_in_root_file_dir: true
+          latexmk_use_lualatex: true
+
+      - name: Preparar y verificar los PDF
+        run: |
+          sudo chown -R "$(id -u):$(id -g)" "$GITHUB_WORKSPACE"
+          cp CV_JSPS_English/main.pdf CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
+          test -s cv.pdf
+          test -s CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
+          pdfinfo cv.pdf | grep -E '^(Pages|File size):'
+          pdfinfo CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf | grep -E '^(Pages|File size):'
+
+      - name: Guardar los PDF actualizados en el repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cv.pdf CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m "Actualiza los PDF del CV [skip ci]"
+            git push
+          fi
 
       - name: Configurar Quarto
         uses: quarto-dev/quarto-actions/setup@v2
