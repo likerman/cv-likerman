@@ -38,11 +38,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Instalar TeX Live y fuentes
+      - name: Instalar TeX Live, fuentes y herramientas PDF
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            latexmk biber \
+            latexmk biber poppler-utils \
             texlive-xetex texlive-luatex \
             texlive-latex-extra texlive-bibtex-extra texlive-fonts-extra \
             texlive-fonts-recommended texlive-lang-spanish \
@@ -60,10 +60,41 @@ jobs:
         run: latexmk -lualatex -file-line-error -halt-on-error -interaction=nonstopmode main.tex
 
       - name: Preparar y verificar los PDF
+        shell: bash
         run: |
+          set -euo pipefail
           cp CV_JSPS_English/main.pdf CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
           test -s cv.pdf
           test -s CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
+
+          revisar_pdf() {
+            local archivo="$1"
+            local prefijo="$2"
+            local paginas
+            local minimo=999999
+            paginas=$(pdfinfo "$archivo" | awk '/^Pages:/ {print $2}')
+            echo "$archivo: $paginas páginas"
+
+            for pagina in $(seq 1 "$paginas"); do
+              palabras=$(pdftotext -f "$pagina" -l "$pagina" "$archivo" - | wc -w | tr -d ' ')
+              echo "  página $pagina: $palabras palabras"
+              if [ "$palabras" -lt "$minimo" ]; then
+                minimo="$palabras"
+              fi
+              if [ "$palabras" -lt 8 ]; then
+                echo "::error file=$archivo::La página $pagina está prácticamente vacía ($palabras palabras)."
+                exit 1
+              elif [ "$palabras" -lt 35 ]; then
+                echo "::warning file=$archivo::La página $pagina tiene poco contenido ($palabras palabras); revisar paginación."
+              fi
+            done
+
+            echo "PAGES_${prefijo}=$paginas" >> "$GITHUB_ENV"
+            echo "MIN_${prefijo}=$minimo" >> "$GITHUB_ENV"
+          }
+
+          revisar_pdf cv.pdf ES
+          revisar_pdf CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf EN
           ls -lh cv.pdf CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
 
       - name: Guardar los PDF actualizados en el repositorio
@@ -72,7 +103,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add cv.pdf CV_JSPS_English/Jeremias_Likerman_CV_JSPS.pdf
           if ! git diff --cached --quiet; then
-            git commit -m "Actualiza los PDF del CV [skip ci]"
+            git commit -m "Actualiza los PDF del CV (ES: ${PAGES_ES} pág., mínimo ${MIN_ES} palabras; EN: ${PAGES_EN} pág., mínimo ${MIN_EN} palabras) [skip ci]"
             git push
           fi
 
