@@ -1,6 +1,10 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
+% Awesome-CV vuelve a solicitar geometry al final de la clase con estas opciones.
+% Pasarlas antes de cargar la clase evita el option clash; más abajo se aplican
+% los márgenes definitivos mediante \geometry{...}.
+\PassOptionsToPackage{left=5cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot}{geometry}
 \documentclass[10pt,a4paper]{awesome-cv}
 \addbibresource{bibliography.bib}
 
