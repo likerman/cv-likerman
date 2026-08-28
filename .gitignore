@@ -12,6 +12,7 @@
 *.run.xml
 *.synctex.gz
 *.toc
+*.xdv
 texput.log
 
 # Quarto build artifacts

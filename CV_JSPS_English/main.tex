@@ -13,8 +13,10 @@
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 \usepackage[english]{babel}
+\usepackage{needspace}
 \usepackage{enumitem}
 \usepackage{tabularx}
+\usepackage{longtable}
 
 \photo{../profile.png}
 \name{Jeremías}{Likerman}
@@ -33,22 +35,49 @@
 \renewcommand*{\paragraphstyle}{\fontsize{9.4pt}{12.2pt}\bodyfontlight\upshape\color{text}}
 \renewcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{11.2pt}\bodyfontlight\upshape\color{text} #1}}
 \renewcommand{\cvsection}[1]{%
-  \par\vspace{3.2mm}%
-  \sectionstyle{#1}%
-  \phantomsection%
-  \color{gray}\vhrulefill{0.9pt}%
-  \par\nobreak\vspace{2mm}%
+  \par\Needspace{4\baselineskip}%
+  \addvspace{3.2mm}%
+  \sectionstyle{#1}\par\nobreak%
+  \vspace{0.15mm}%
+  {\color{gray}\hrule height 0.55pt}%
+  \vspace{0.65mm}%
 }
 \renewcommand{\cvsubsection}[1]{%
-  \par\vspace{2mm}%
-  \subsectionstyle{#1}%
-  \phantomsection%
-  \par\nobreak\vspace{0.5mm}%
+  \par\Needspace{3.5\baselineskip}%
+  \addvspace{2mm}%
+  \subsectionstyle{#1}\par\nobreak%
+  \vspace{0.55mm}%
 }
 \renewenvironment{cvparagraph}{%
   \paragraphstyle
 }{%
-  \par\vspace{2mm}%
+  \par\vspace{1mm}%
+}
+\renewenvironment{cventries}{%
+  \par\vspace{0.1mm}%
+}{%
+  \par\vspace{0mm}%
+}
+\renewcommand*{\cventry}[5]{%
+  \par\Needspace{3.8\baselineskip}%
+  \addvspace{0mm}%
+  \begingroup%
+  \renewcommand{\arraystretch}{0.82}%
+  \noindent\begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{3.75cm}@{}}
+    \entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+    \entrypositionstyle{#1} & \entrydatestyle{#4}
+  \end{tabularx}%
+  \endgroup%
+  \vspace{-1.15mm}%
+  \descriptionstyle{#5}\par%
+  \vspace{-0.95mm}%
+}
+\renewenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=1.55em,topsep=0pt,itemsep=0pt,parsep=0pt,partopsep=0pt]
+  \fontsize{8.65pt}{10.9pt}\bodyfontlight\color{text}
+}{%
+  \end{itemize}%
+  \vspace{-1.1mm}%
 }
 \makeatother
 
@@ -63,6 +92,24 @@
   \begin{tabular}{@{}>{\bfseries\color{darktext}\raggedright\arraybackslash}m{2.35cm}@{}>{\raggedright\arraybackslash}m{\dimexpr\textwidth-5.1cm\relax}@{}>{\raggedleft\arraybackslash\itshape\color{graytext}}m{2.75cm}@{}}
     #1 & #2 & #3
   \end{tabular}\vspace{0.7mm}%
+}
+
+\DeclareFieldFormat[article]{title}{#1}
+\defbibenvironment{bibliography}
+  {\begin{enumerate}[leftmargin=1.6em,label=\arabic*.,font=\fontsize{7.55pt}{8.45pt}\bodyfont\mdseries\color{darktext},topsep=0pt,itemsep=0.15mm,parsep=0pt,partopsep=0pt]}
+  {\end{enumerate}}
+  {\item}
+\DeclareBibliographyDriver{article}{%
+  {\fontsize{7.55pt}{8.45pt}\bodyfont\mdseries\color{darktext}\printfield{title}}%
+  \setunit{\addperiod\space}%
+  {\fontsize{6.95pt}{7.8pt}\selectfont\color{graytext}\printnames{author}}%
+  \setunit{\addperiod\space}%
+  {\fontsize{6.9pt}{7.75pt}\selectfont\addfontfeature{Color=lightgray}\itshape%
+    \usebibmacro{journal+issuetitle}%
+    \setunit{\space}%
+    \printfield{pages}%
+  }%
+  \par\vspace{0.12mm}%
 }
 
 \begin{document}
@@ -102,12 +149,12 @@
 \cvsection{Selected Recent Major Publications}
 {\fontsize{9pt}{11.1pt}\bodyfontlight\color{text}
 \begin{enumerate}
+  \item Jara, P.P., Pinto, L., \& \textbf{Likerman, J.} (2026). Analogue modelling to enhance spatial reasoning and understanding of tectonic processes in geoscience education. \emph{Andean Geology}, 53(3).
   \item Villarroel, M.A., et al., including \textbf{Likerman, J.} (2026). The role of compressional structures in the development of collapse calderas: Insights from analogue models. \emph{Journal of Volcanology and Geothermal Research}, 473, 108582.
   \item Gianni, G.M., Gallo, L.C., \textbf{Likerman, J.}, et al. (2025). Slab underthrusting is the primary control on flat-slab size. \emph{Science Advances}, 11(28).
   \item Correa-Luna, C., Yagupsky, D.L., \textbf{Likerman, J.}, \& Barcelona, H. (2025). Impact of large-scale structures on fracture network connectivity: Insights into the Vaca Muerta unconventional play. \emph{Tectonophysics}, 230640.
   \item Plotek, B., \textbf{Likerman, J.}, \& Cristallini, E. (2024). Geomechanical modeling of fault-propagation folds: A comparative analysis of finite-element and the trishear kinematic model. \emph{Journal of Structural Geology}, 105064.
   \item Navarrete, C., et al., including \textbf{Likerman, J.} (2024). Massive Jurassic slab break-off revealed by a multidisciplinary reappraisal of the Chon Aike silicic large igneous province. \emph{Earth-Science Reviews}, 249, 104651.
-  \item Gianni, G.M., \textbf{Likerman, J.}, Navarrete, C.R., Gianni, C.R., \& Zlotnik, S. (2023). Ghost-arc geochemical anomaly at a spreading ridge caused by supersized flat subduction. \emph{Nature Communications}, 14, 2083.
 \end{enumerate}
 }
 

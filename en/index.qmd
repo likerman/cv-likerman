@@ -36,7 +36,7 @@ Geoscientist specializing in **structural geology, geomechanics, and multiscale 
 Research and fieldwork
 :::
 ::: {.metric}
-**19**
+**20**
 Peer-reviewed articles
 :::
 ::: {.metric}
@@ -118,25 +118,26 @@ Training in Structural Geology and MATLAB applied to Geosciences.
 
 ## Peer-reviewed publications
 
-1. Villarroel, M. A. et al., including **Likerman, J.** (2026). *The role of compressional structures in the development of collapse calderas: Insights from analogue models*. Journal of Volcanology and Geothermal Research.
-2. Gianni, G. M. et al., including **Likerman, J.** (2025). *Slab underthrusting is the primary control on flat slab size*. Science Advances, 11(28).
-3. Correa-Luna, C., Yagupsky, D. L., **Likerman, J.**, & Barcelona, H. (2025). *Impact of large-scale structures on fracture network connectivity: Insights into the Vaca Muerta unconventional play*. Tectonophysics.
-4. Plotek, B., **Likerman, J.**, & Cristallini, E. (2024). *Geomechanical modeling of fault-propagation folds*. Journal of Structural Geology.
-5. Navarrete, C. et al., including **Likerman, J.** (2024). *Massive Jurassic slab break-off revealed by a multidisciplinary reappraisal of the Chon Aike silicic large igneous province*. Earth-Science Reviews.
-6. Gianni, G. M., **Likerman, J.**, Navarrete, C. R., Gianni, C. R., & Zlotnik, S. (2023). *Ghost-arc geochemical anomaly at a spreading ridge caused by supersized flat subduction*. Nature Communications.
-7. Plotek, B. et al., including **Likerman, J.** (2022). *Kinematics of fault-propagation folding*. Journal of Structural Geology.
-8. Correa-Luna, C., Yagupsky, D. L., **Likerman, J.**, & Barcelona, H. (2022). *Natural fracture characterization of the Los Catutos Member*. Journal of South American Earth Sciences.
-9. **Likerman, J.**, Zlotnik, S., & Li, C.-F. (2021). *The effects of small-scale convection in the shallow lithosphere of the North Atlantic*. Geophysical Journal International.
-10. García Morabito, E. et al., including **Likerman, J.** (2021). *The influence of climate on the dynamics of mountain building within the Northern Patagonian Andes*. Tectonics.
-11. Correa Luna, C., Yagupsky, D. L., & **Likerman, J.** (2019). *Fracture network analysis of Yacoraite Formation in the Tres Cruces sub-basin*. Journal of South American Earth Sciences.
-12. Jara, P. et al., including **Likerman, J.** (2017). *Closure type effects on the structural pattern of an inverted extensional basin of variable width*. Journal of South American Earth Sciences.
-13. Gianni, G. M. et al., including **Likerman, J.** (2017). *Cenozoic intraplate tectonics in Central Patagonia*. Tectonophysics.
-14. Terrizzano, C. M. et al., including **Likerman, J.** (2017). *Climatic and tectonic forcing on alluvial fans in the Southern Central Andes*. Quaternary Science Reviews.
-15. Cilona, A., Aydin, A., **Likerman, J.**, Parker, B., & Cherry, J. (2016). *Structural and statistical characterization of joints and multi-scale faults*. Journal of Structural Geology.
-16. Tobal, J. E. et al., including **Likerman, J.** (2015). *Middle to late Miocene extensional collapse of the North Patagonian Andes*. Tectonophysics.
-17. Ghiglione, M. C. et al., including **Likerman, J.** (2014). *Geodynamic context for the deposition of coarse-grained deep-water axial channel systems in the Patagonian Andes*. Basin Research.
-18. Jara, P. et al., including **Likerman, J.** (2014). *Role of basin width variation in tectonic inversion*. Geological Society, London, Special Publications.
-19. **Likerman, J.**, Burlando, J. F., Cristallini, E. O., & Ghiglione, M. C. (2013). *Along-strike structural variations in the Southern Patagonian Andes*. Tectonophysics.
+1. Jara, P. P., Pinto, L., & **Likerman, J.** (2026). *Analogue modelling to enhance spatial reasoning and understanding of tectonic processes in geoscience education*. Andean Geology, 53(3).
+2. Villarroel, M. A. et al., including **Likerman, J.** (2026). *The role of compressional structures in the development of collapse calderas: Insights from analogue models*. Journal of Volcanology and Geothermal Research.
+3. Gianni, G. M. et al., including **Likerman, J.** (2025). *Slab underthrusting is the primary control on flat slab size*. Science Advances, 11(28).
+4. Correa-Luna, C., Yagupsky, D. L., **Likerman, J.**, & Barcelona, H. (2025). *Impact of large-scale structures on fracture network connectivity: Insights into the Vaca Muerta unconventional play*. Tectonophysics.
+5. Plotek, B., **Likerman, J.**, & Cristallini, E. (2024). *Geomechanical modeling of fault-propagation folds*. Journal of Structural Geology.
+6. Navarrete, C. et al., including **Likerman, J.** (2024). *Massive Jurassic slab break-off revealed by a multidisciplinary reappraisal of the Chon Aike silicic large igneous province*. Earth-Science Reviews.
+7. Gianni, G. M., **Likerman, J.**, Navarrete, C. R., Gianni, C. R., & Zlotnik, S. (2023). *Ghost-arc geochemical anomaly at a spreading ridge caused by supersized flat subduction*. Nature Communications.
+8. Plotek, B. et al., including **Likerman, J.** (2022). *Kinematics of fault-propagation folding*. Journal of Structural Geology.
+9. Correa-Luna, C., Yagupsky, D. L., **Likerman, J.**, & Barcelona, H. (2022). *Natural fracture characterization of the Los Catutos Member*. Journal of South American Earth Sciences.
+10. **Likerman, J.**, Zlotnik, S., & Li, C.-F. (2021). *The effects of small-scale convection in the shallow lithosphere of the North Atlantic*. Geophysical Journal International.
+11. García Morabito, E. et al., including **Likerman, J.** (2021). *The influence of climate on the dynamics of mountain building within the Northern Patagonian Andes*. Tectonics.
+12. Correa Luna, C., Yagupsky, D. L., & **Likerman, J.** (2019). *Fracture network analysis of Yacoraite Formation in the Tres Cruces sub-basin*. Journal of South American Earth Sciences.
+13. Jara, P. et al., including **Likerman, J.** (2017). *Closure type effects on the structural pattern of an inverted extensional basin of variable width*. Journal of South American Earth Sciences.
+14. Gianni, G. M. et al., including **Likerman, J.** (2017). *Cenozoic intraplate tectonics in Central Patagonia*. Tectonophysics.
+15. Terrizzano, C. M. et al., including **Likerman, J.** (2017). *Climatic and tectonic forcing on alluvial fans in the Southern Central Andes*. Quaternary Science Reviews.
+16. Cilona, A., Aydin, A., **Likerman, J.**, Parker, B., & Cherry, J. (2016). *Structural and statistical characterization of joints and multi-scale faults*. Journal of Structural Geology.
+17. Tobal, J. E. et al., including **Likerman, J.** (2015). *Middle to late Miocene extensional collapse of the North Patagonian Andes*. Tectonophysics.
+18. Ghiglione, M. C. et al., including **Likerman, J.** (2014). *Geodynamic context for the deposition of coarse-grained deep-water axial channel systems in the Patagonian Andes*. Basin Research.
+19. Jara, P. et al., including **Likerman, J.** (2014). *Role of basin width variation in tectonic inversion*. Geological Society, London, Special Publications.
+20. **Likerman, J.**, Burlando, J. F., Cristallini, E. O., & Ghiglione, M. C. (2013). *Along-strike structural variations in the Southern Patagonian Andes*. Tectonophysics.
 
 ## Fellowships and distinctions
 

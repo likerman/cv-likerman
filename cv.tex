@@ -56,18 +56,18 @@
 
 \renewcommand{\cvsection}[1]{%
   \par\Needspace{4\baselineskip}%
-  \addvspace{4.2mm}%
+  \addvspace{3.2mm}%
   \sectionstyle{#1}\par\nobreak%
-  \vspace{-0.4mm}%
-  {\color{gray}\hrule height 0.8pt}%
-  \vspace{1.2mm}%
+  \vspace{0.15mm}%
+  {\color{gray}\hrule height 0.55pt}%
+  \vspace{0.65mm}%
 }
 
 \renewcommand{\cvsubsection}[1]{%
   \par\Needspace{3.5\baselineskip}%
-  \addvspace{2.1mm}%
+  \addvspace{2mm}%
   \subsectionstyle{#1}\par\nobreak%
-  \vspace{0.45mm}%
+  \vspace{0.55mm}%
 }
 
 \renewenvironment{cvparagraph}{%
@@ -79,29 +79,32 @@
 % Cada entrada conserva juntas sus dos líneas de encabezado, pero el texto de
 % descripción queda fuera de la tabla y puede fluir naturalmente.
 \renewenvironment{cventries}{%
-  \par\vspace{0.3mm}%
+  \par\vspace{0.1mm}%
 }{%
-  \par\vspace{0.2mm}%
+  \par\vspace{0mm}%
 }
 
 \renewcommand*{\cventry}[5]{%
-  \par\Needspace{4.5\baselineskip}%
-  \addvspace{0.85mm}%
+  \par\Needspace{3.8\baselineskip}%
+  \addvspace{0mm}%
+  \begingroup%
+  \renewcommand{\arraystretch}{0.82}%
   \noindent\begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{3.75cm}@{}}
     \entrytitlestyle{#2} & \entrylocationstyle{#3} \\
     \entrypositionstyle{#1} & \entrydatestyle{#4}
   \end{tabularx}%
-  \vspace{-0.35mm}%
+  \endgroup%
+  \vspace{-1.15mm}%
   \descriptionstyle{#5}\par%
-  \vspace{0.35mm}%
+  \vspace{-0.95mm}%
 }
 
 \renewenvironment{cvitems}{%
-  \begin{itemize}[leftmargin=1.55em,topsep=0.15mm,itemsep=0pt,parsep=0pt,partopsep=0pt]
+  \begin{itemize}[leftmargin=1.55em,topsep=0pt,itemsep=0pt,parsep=0pt,partopsep=0pt]
   \fontsize{8.65pt}{10.9pt}\bodyfontlight\color{text}
 }{%
   \end{itemize}%
-  \vspace{-0.25mm}%
+  \vspace{-1.1mm}%
 }
 
 % Proyectos, becas y distinciones se maquetan con longtable para permitir
@@ -122,22 +125,24 @@
 
 \makeatother
 
-% Publicaciones: una referencia por párrafo compacto en dos columnas.
-% Se conservan título, autores, revista, páginas y año.
+% Publicaciones: una referencia por párrafo compacto en una sola columna.
+% Se conservan título, autores, revista y páginas.
 \DeclareFieldFormat[article]{title}{#1}
+\defbibenvironment{bibliography}
+  {\begin{enumerate}[leftmargin=1.6em,label=\arabic*.,font=\fontsize{7.55pt}{8.45pt}\bodyfont\mdseries\color{darktext},topsep=0pt,itemsep=0.15mm,parsep=0pt,partopsep=0pt]}
+  {\end{enumerate}}
+  {\item}
 \DeclareBibliographyDriver{article}{%
-  {\fontsize{7.45pt}{8.4pt}\bodyfont\mdseries\color{darktext}\printfield{title}}%
+  {\fontsize{7.55pt}{8.45pt}\bodyfont\mdseries\color{darktext}\printfield{title}}%
   \setunit{\addperiod\space}%
-  {\fontsize{6.85pt}{7.7pt}\selectfont\color{graytext}\printnames{author}}%
+  {\fontsize{6.95pt}{7.8pt}\selectfont\color{graytext}\printnames{author}}%
   \setunit{\addperiod\space}%
-  {\fontsize{6.8pt}{7.65pt}\selectfont\addfontfeature{Color=lightgray}\itshape%
+  {\fontsize{6.9pt}{7.75pt}\selectfont\addfontfeature{Color=lightgray}\itshape%
     \usebibmacro{journal+issuetitle}%
     \setunit{\space}%
     \printfield{pages}%
-    \setunit*{\addcomma\space}%
-    \printfield{year}%
   }%
-  \par\vspace{0.35mm}%
+  \par\vspace{0.12mm}%
 }
 
 \begin{document}
