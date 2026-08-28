@@ -1,164 +1,47 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-% One-page English CV for the JSPS counterpart-PI application.
-% Uses the same Awesome-CV design as the full Spanish CV.
+% Full English CV. Structure and layout intentionally mirror cv.tex.
 \PassOptionsToPackage{left=5cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot}{geometry}
 \documentclass[10pt,a4paper]{../awesome-cv}
 \addbibresource{../bibliography.bib}
 
-\geometry{left=1.45cm,top=1.15cm,right=1.45cm,bottom=1.15cm,nohead,nofoot}
+\fontdir[../fonts/]
 \colorlet{awesome}{awesome-red}
 \setbool{acvSectionColorHighlight}{true}
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 \usepackage[english]{babel}
-\usepackage{needspace}
-\usepackage{enumitem}
-\usepackage{tabularx}
-\usepackage{longtable}
 
 \photo{../profile.png}
 \name{Jeremías}{Likerman}
-\position{Adjunct Researcher, CONICET{\enskip\cdotp\enskip}Associate Professor, University of Buenos Aires}
-\address{Institute of Andean Studies ``Don Pablo Groeber'' (IDEAN), CONICET--UBA, Argentina}
+\position{Adjunct Researcher - CONICET{\enskip\cdotp\enskip} Associate Professor - University of Buenos Aires}
+\address{Institute of Andean Studies ``Don Pablo Groeber'' (IDEAN), CONICET--UBA}
+\mobile{(+54) 230-455-7758}
 \email{jlikerman@uba.ar}
 \googlescholar{HGA3sQQAAAAJ}{Google Scholar}
 \extrainfo{\href{https://orcid.org/0000-0003-3844-2085}{ORCID 0000-0003-3844-2085}}
 
-\makeatletter
-\renewcommand*{\headerpositionstyle}[1]{{\fontsize{8pt}{9.6pt}\bodyfont\scshape\color{awesome} #1}}
-\renewcommand*{\headeraddressstyle}[1]{{\fontsize{8.4pt}{10pt}\headerfont\itshape\color{graytext} #1}}
-\renewcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{9.6pt}\headerfont\color{text} #1}}
-\renewcommand*{\sectionstyle}[1]{{\fontsize{13.2pt}{15.5pt}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
-\renewcommand*{\subsectionstyle}[1]{{\fontsize{10pt}{12pt}\bodyfont\bfseries\scshape\textcolor{graytext}{#1}}}
-\renewcommand*{\paragraphstyle}{\fontsize{9.4pt}{12.2pt}\bodyfontlight\upshape\color{text}}
-\renewcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{11.2pt}\bodyfontlight\upshape\color{text} #1}}
-\renewcommand{\cvsection}[1]{%
-  \par\Needspace{4\baselineskip}%
-  \addvspace{3.2mm}%
-  \sectionstyle{#1}\par\nobreak%
-  \vspace{0.15mm}%
-  {\color{gray}\hrule height 0.55pt}%
-  \vspace{0.65mm}%
-}
-\renewcommand{\cvsubsection}[1]{%
-  \par\Needspace{3.5\baselineskip}%
-  \addvspace{2mm}%
-  \subsectionstyle{#1}\par\nobreak%
-  \vspace{0.55mm}%
-}
-\renewenvironment{cvparagraph}{%
-  \paragraphstyle
-}{%
-  \par\vspace{1mm}%
-}
-\renewenvironment{cventries}{%
-  \par\vspace{0.1mm}%
-}{%
-  \par\vspace{0mm}%
-}
-\renewcommand*{\cventry}[5]{%
-  \par\Needspace{3.8\baselineskip}%
-  \addvspace{0mm}%
-  \begingroup%
-  \renewcommand{\arraystretch}{0.82}%
-  \noindent\begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{3.75cm}@{}}
-    \entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-    \entrypositionstyle{#1} & \entrydatestyle{#4}
-  \end{tabularx}%
-  \endgroup%
-  \vspace{-1.15mm}%
-  \descriptionstyle{#5}\par%
-  \vspace{-0.95mm}%
-}
-\renewenvironment{cvitems}{%
-  \begin{itemize}[leftmargin=1.55em,topsep=0pt,itemsep=0pt,parsep=0pt,partopsep=0pt]
-  \fontsize{8.65pt}{10.9pt}\bodyfontlight\color{text}
-}{%
-  \end{itemize}%
-  \vspace{-1.1mm}%
-}
-\makeatother
-
-\setlist[itemize]{leftmargin=4mm,topsep=0.5mm,itemsep=0.5mm,parsep=0mm}
-\setlist[enumerate]{leftmargin=4.7mm,topsep=0.7mm,itemsep=0.9mm,parsep=0mm}
-\setlength{\tabcolsep}{0pt}
-\setlength{\footskip}{6mm}
-\setlength{\emergencystretch}{1.5em}
-
-\newcommand{\careerrow}[3]{%
-  \setlength{\extrarowheight}{0pt}%
-  \begin{tabular}{@{}>{\bfseries\color{darktext}\raggedright\arraybackslash}m{2.35cm}@{}>{\raggedright\arraybackslash}m{\dimexpr\textwidth-5.1cm\relax}@{}>{\raggedleft\arraybackslash\itshape\color{graytext}}m{2.75cm}@{}}
-    #1 & #2 & #3
-  \end{tabular}\vspace{0.7mm}%
-}
-
-\DeclareFieldFormat[article]{title}{#1}
-\defbibenvironment{bibliography}
-  {\begin{enumerate}[leftmargin=1.6em,label=\arabic*.,font=\fontsize{7.55pt}{8.45pt}\bodyfont\mdseries\color{darktext},topsep=0pt,itemsep=0.15mm,parsep=0pt,partopsep=0pt]}
-  {\end{enumerate}}
-  {\item}
-\DeclareBibliographyDriver{article}{%
-  {\fontsize{7.55pt}{8.45pt}\bodyfont\mdseries\color{darktext}\printfield{title}}%
-  \setunit{\addperiod\space}%
-  {\fontsize{6.95pt}{7.8pt}\selectfont\color{graytext}\printnames{author}}%
-  \setunit{\addperiod\space}%
-  {\fontsize{6.9pt}{7.75pt}\selectfont\addfontfeature{Color=lightgray}\itshape%
-    \usebibmacro{journal+issuetitle}%
-    \setunit{\space}%
-    \printfield{pages}%
-  }%
-  \par\vspace{0.12mm}%
-}
+\geometry{left=1.8cm,top=1.35cm,right=1.8cm,bottom=1.7cm,footskip=0.75cm}
+\input{../cv/layout}
 
 \begin{document}
 
 \makecvheader
-\vspace{0mm}
 
-\cvsection{Education}
-\careerrow{PhD, 2015}{Geological Sciences, University of Buenos Aires (UBA)}{Argentina}
-\descriptionstyle{Thesis: \emph{Prediction of fracturing on irregular geological surfaces using static methods}. Supervisor: Prof. Ernesto Cristallini.}\par
-\vspace{0.35mm}
-\careerrow{BSc, 2010}{Geological Sciences, University of Buenos Aires (UBA)}{Argentina}
+\makecvfooter
+  {\today}
+  {Jeremías Likerman~~~·~~~Curriculum Vitae}
+  {\thepage}
 
-\cvsection{Main Career History}
-\careerrow{May 2026--present}{Associate Professor, Department of Geological Sciences, UBA}{Argentina}
-\descriptionstyle{Teaching: Geostatistics and Geoinformatics.}\par
-\careerrow{Sep 2025--present}{Institutional Coordinator, IDEAN, CONICET--UBA}{Argentina}
-\careerrow{2018--present}{Adjunct Researcher (Investigador Adjunto), CONICET--IDEAN}{Argentina}
-\descriptionstyle{Structural geology, geomechanics, geodynamics, natural fractures, and geothermal systems. Research career from 2018; promoted to Investigador Adjunto, November 2023.}\par
-\careerrow{May--Sep 2025}{Visiting Researcher, GEO3BCN--CSIC}{Spain}
-\careerrow{Aug--Sep 2024}{Visiting Researcher, GEO3BCN--CSIC}{Spain}
-\careerrow{2015--2017}{Postdoctoral Researcher, CONICET and Universitat Politècnica de Catalunya}{Argentina/Spain}
-\careerrow{2013--2026}{Teaching appointments, Department of Geological Sciences, UBA}{Argentina}
-\careerrow{2013--2014}{Visiting Doctoral Researcher, Stanford University}{USA}
-
-\cvsection{Major Research Achievements}
-\begin{cvparagraph}\sloppy
-\begin{itemize}
-  \item More than 15 years of research in structural geology and multiscale numerical modelling, integrating field observations, analogue experiments, geomechanics, and 2D/3D simulations.
-  \item Developed predictive approaches for natural-fracture distribution and connectivity in folded structures and energy reservoirs, including the Yacoraite carbonates and the Vaca Muerta Formation.
-  \item Principal Investigator of the 2026 Spanish supercomputing project on three-dimensional stress transfer between adjacent Andean flat slabs, and Co-PI of a 2026--2029 CONICET project linking tectonic-structural modelling with energy resources.
-  \item Leads and co-leads national and international projects on subduction dynamics, lithospheric deformation, natural fractures, and geothermal systems; coordinator of CONICET--CSIC cooperation on geothermal modelling (2024--2026).
-  \item Supervises early-career researchers and undergraduate, doctoral, and postdoctoral work in structural geology, geomechanics, and numerical modelling.
-\end{itemize}
-\end{cvparagraph}
-
-\cvsection{Selected Recent Major Publications}
-{\fontsize{9pt}{11.1pt}\bodyfontlight\color{text}
-\begin{enumerate}
-  \item Jara, P.P., Pinto, L., \& \textbf{Likerman, J.} (2026). Analogue modelling to enhance spatial reasoning and understanding of tectonic processes in geoscience education. \emph{Andean Geology}, 53(3).
-  \item Villarroel, M.A., et al., including \textbf{Likerman, J.} (2026). The role of compressional structures in the development of collapse calderas: Insights from analogue models. \emph{Journal of Volcanology and Geothermal Research}, 473, 108582.
-  \item Gianni, G.M., Gallo, L.C., \textbf{Likerman, J.}, et al. (2025). Slab underthrusting is the primary control on flat-slab size. \emph{Science Advances}, 11(28).
-  \item Correa-Luna, C., Yagupsky, D.L., \textbf{Likerman, J.}, \& Barcelona, H. (2025). Impact of large-scale structures on fracture network connectivity: Insights into the Vaca Muerta unconventional play. \emph{Tectonophysics}, 230640.
-  \item Plotek, B., \textbf{Likerman, J.}, \& Cristallini, E. (2024). Geomechanical modeling of fault-propagation folds: A comparative analysis of finite-element and the trishear kinematic model. \emph{Journal of Structural Geology}, 105064.
-  \item Navarrete, C., et al., including \textbf{Likerman, J.} (2024). Massive Jurassic slab break-off revealed by a multidisciplinary reappraisal of the Chon Aike silicic large igneous province. \emph{Earth-Science Reviews}, 249, 104651.
-\end{enumerate}
-}
-
-% The complete CV follows the JSPS-oriented first page.
-\input{full_cv}
+\vspace{1.2mm}
+\input{cv/summary}
+\input{cv/education}
+\input{cv/experience}
+\input{cv/proyectos}
+\input{cv/rrhh}
+\input{cv/becas2}
+\input{cv/skills}
+\input{cv/biblio}
 
 \end{document}
