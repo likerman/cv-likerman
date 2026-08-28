@@ -13,11 +13,12 @@ on:
       - "profile.png"
       - "cv.tex"
       - "cv/**"
+      - "scripts/check_cv_sync.sh"
       - "bibliography.bib"
       - "awesome-cv.cls"
       - "fonts/**"
       - "CV_JSPS_English/*.tex"
-      - "CV_JSPS_English/fonts"
+      - "CV_JSPS_English/cv/**"
       - ".github/workflows/publish.yml"
 
 permissions:
@@ -53,7 +54,9 @@ jobs:
           kpsewhich biblatex.sty
 
       - name: Compilar CV en español
-        run: latexmk -xelatex -file-line-error -halt-on-error -interaction=nonstopmode cv.tex
+        run: |
+          bash scripts/check_cv_sync.sh
+          latexmk -xelatex -file-line-error -halt-on-error -interaction=nonstopmode cv.tex
 
       - name: Compilar CV en inglés
         working-directory: CV_JSPS_English
