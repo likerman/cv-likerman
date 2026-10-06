@@ -68,12 +68,29 @@ Su investigación combina geología estructural, geomecánica, geodinámica y ge
 
 ::: {.timeline-item}
 **Profesor adjunto — Departamento de Ciencias Geológicas, UBA**  
-Mayo de 2026–presente. Docencia en Geoestadística y Geoinformática.
+Junio de 2026–presente. Dedicación exclusiva. Docencia en Geoestadística, Geoinformática y Levantamiento Geológico.
 :::
 
 ::: {.timeline-item}
 **Coordinador institucional — IDEAN, CONICET–UBA**  
 Septiembre de 2025–presente. Integrante del Consejo Directivo desde abril de 2024.
+:::
+
+## Trayectoria docente universitaria
+
+::: {.timeline-item}
+**Profesor adjunto — Departamento de Ciencias Geológicas, UBA**  
+Junio de 2026–presente. Geoestadística, Geoinformática y Levantamiento Geológico.
+:::
+
+::: {.timeline-item}
+**Jefe de Trabajos Prácticos — Departamento de Ciencias Geológicas, UBA**  
+Marzo de 2018–mayo de 2026. Introducción a la Geología, Levantamiento Geológico y Geoestadística.
+:::
+
+::: {.timeline-item}
+**Ayudante de Primera — Departamento de Ciencias Geológicas, UBA**  
+Junio de 2013–septiembre de 2017. Geología Estructural, Geotectónica y Tectónica de Campo.
 :::
 
 ## Formación

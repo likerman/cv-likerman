@@ -1,0 +1,159 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+% CV académico resumido en español, derivado del CV completo.
+\PassOptionsToPackage{left=5cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot}{geometry}
+\documentclass[10pt,a4paper]{../awesome-cv}
+
+\fontdir[../fonts/]
+\geometry{left=1.35cm,top=1.05cm,right=1.35cm,bottom=1.25cm,nohead,nofoot}
+\colorlet{awesome}{awesome-red}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\usepackage[spanish]{babel}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{needspace}
+\raggedbottom
+
+\photo{../profile.png}
+\name{Jeremías}{Likerman}
+\position{Investigador adjunto, CONICET{\enskip\cdotp\enskip}Profesor adjunto, Universidad de Buenos Aires}
+\address{Instituto de Estudios Andinos ``Don Pablo Groeber'' (IDEAN), CONICET--UBA}
+\email{jlikerman@uba.ar}
+\googlescholar{HGA3sQQAAAAJ}{Google Scholar}
+\extrainfo{\href{https://orcid.org/0000-0003-3844-2085}{ORCID 0000-0003-3844-2085}}
+
+\makeatletter
+\renewcommand*{\sectionstyle}[1]{{\fontsize{12.2pt}{14pt}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\renewcommand*{\paragraphstyle}{\fontsize{8.35pt}{10.25pt}\bodyfontlight\upshape\color{text}}
+\renewcommand*{\entrytitlestyle}[1]{{\fontsize{8.85pt}{10.2pt}\bodyfont\bfseries\color{darktext} #1}}
+\renewcommand*{\entrypositionstyle}[1]{{\fontsize{7.55pt}{8.8pt}\bodyfont\scshape\color{graytext} #1}}
+\renewcommand*{\entrydatestyle}[1]{{\fontsize{7.55pt}{8.8pt}\bodyfontlight\slshape\color{graytext} #1}}
+\renewcommand*{\entrylocationstyle}[1]{{\fontsize{7.75pt}{9pt}\bodyfontlight\slshape\color{awesome} #1}}
+\renewcommand*{\descriptionstyle}[1]{{\fontsize{8.1pt}{9.8pt}\bodyfontlight\upshape\color{text} #1}}
+\renewcommand*{\honorpositionstyle}[1]{{\fontsize{7.9pt}{9.35pt}\bodyfont\mdseries\color{darktext} #1}}
+\renewcommand*{\honortitlestyle}[1]{{\fontsize{7.2pt}{8.5pt}\bodyfontlight\color{graytext} #1}}
+\renewcommand*{\honordatestyle}[1]{{\fontsize{7.35pt}{8.6pt}\bodyfont\bfseries\color{graytext} #1}}
+\renewcommand*{\honorlocationstyle}[1]{{\fontsize{7.3pt}{8.6pt}\bodyfontlight\slshape\color{awesome} #1}}
+
+\renewcommand{\cvsection}[1]{%
+  \par\Needspace{3.3\baselineskip}%
+  \addvspace{2.3mm}%
+  \sectionstyle{#1}\par\nobreak%
+  \vspace{0.1mm}%
+  {\color{gray}\hrule height 0.5pt}%
+  \vspace{0.55mm}%
+}
+
+\renewenvironment{cvparagraph}{\paragraphstyle}{\par\vspace{0.45mm}}
+\renewenvironment{cventries}{\par}{\par}
+\renewcommand*{\cventry}[5]{%
+  \par\Needspace{2.8\baselineskip}%
+  \begingroup%
+  \renewcommand{\arraystretch}{0.78}%
+  \noindent\begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{3.45cm}@{}}
+    \entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+    \entrypositionstyle{#1} & \entrydatestyle{#4}
+  \end{tabularx}%
+  \endgroup%
+  \vspace{-1.15mm}%
+  \descriptionstyle{#5}\par\vspace{-0.55mm}%
+}
+
+\renewenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=1.45em,topsep=0pt,itemsep=0pt,parsep=0pt,partopsep=0pt]
+  \fontsize{8.05pt}{9.65pt}\bodyfontlight\color{text}
+}{\end{itemize}\vspace{-0.75mm}}
+
+\renewenvironment{cvhonors}{%
+  \par\vspace{0.1mm}%
+  \noindent\begin{tabular*}{\textwidth}{@{}p{1.35cm}@{\extracolsep{\fill}}p{\dimexpr\textwidth-4.05cm\relax}>{\raggedleft\arraybackslash}p{2.55cm}@{}}
+}{\end{tabular*}\par}
+\renewcommand*{\cvhonor}[4]{%
+  \honordatestyle{#4} & \raggedright\honorpositionstyle{#1}\par\honortitlestyle{#2} & \honorlocationstyle{#3}\tabularnewline[0.55mm]
+}
+\makeatother
+
+\setlist[enumerate]{leftmargin=1.55em,topsep=0pt,itemsep=0.35mm,parsep=0pt,partopsep=0pt}
+\setlength{\columnsep}{5.5mm}
+\setlength{\emergencystretch}{2em}
+\setlength{\footskip}{15pt}
+
+\begin{document}
+\makecvheader
+\makecvfooter{\today}{Jeremías Likerman~~~·~~~Curriculum Vitae resumido}{\thepage}
+\vspace{-1.5mm}
+
+\cvsection{Perfil}
+\begin{cvparagraph}
+Geólogo especializado en geología estructural, geomecánica y modelado numérico multiescala, con más de 15 años de experiencia en investigación, docencia universitaria, trabajo de campo y formación de recursos humanos. Estudia procesos geodinámicos, geotérmicos y geomecánicos en los Andes y en reservorios energéticos mediante modelos 2D/3D, análisis estructural y observaciones de campo. Sus líneas actuales incluyen zonas de subducción, deformación cortical, sistemas volcánicos con potencial geotérmico y fracturación natural e inducida, con énfasis en Vaca Muerta.
+\end{cvparagraph}
+
+\cvsection{Formación y cargos actuales}
+\begin{cventries}
+\cventry{Universidad de Buenos Aires}{Doctor en Ciencias Geológicas}{Argentina}{2015}{\begin{cvitems}\item Tesis sobre predicción del fracturamiento en superficies geológicas irregulares. Director: Ernesto Cristallini.\end{cvitems}}
+\cventry{CONICET--IDEAN}{Investigador adjunto}{Argentina}{2018--presente}{\begin{cvitems}\item Carrera del Investigador desde 2018; promoción a Investigador Adjunto en 2023.\end{cvitems}}
+\cventry{Departamento de Ciencias Geológicas, UBA}{Profesor adjunto}{Argentina}{Junio de 2026--presente}{\begin{cvitems}\item Geoestadística, Geoinformática y Levantamiento Geológico. Dedicación exclusiva.\end{cvitems}}
+\cventry{Departamento de Ciencias Geológicas, UBA}{Jefe de Trabajos Prácticos}{Argentina}{Marzo de 2018--mayo de 2026}{\begin{cvitems}\item Introducción a la Geología, Levantamiento Geológico y Geoestadística.\end{cvitems}}
+\cventry{Departamento de Ciencias Geológicas, UBA}{Ayudante de Primera}{Argentina}{Junio de 2013--septiembre de 2017}{\begin{cvitems}\item Geología Estructural, Geotectónica y Tectónica de Campo.\end{cvitems}}
+\cventry{IDEAN, CONICET--UBA}{Coordinador institucional}{Argentina}{2025--presente}{\begin{cvitems}\item Integrante del Consejo Directivo del instituto desde 2024.\end{cvitems}}
+\end{cventries}
+
+\cvsection{Experiencia y cooperación internacional}
+\begin{cventries}
+\cventry{GEO3BCN--CSIC}{Investigador visitante}{España}{2024--2025}{\begin{cvitems}\item Modelado termomecánico de sistemas volcánicos y evaluación del potencial geotérmico; coordinación de cooperación CONICET--CSIC.\end{cvitems}}
+\cventry{BarcelonaTech (UPC)}{Investigador visitante y becario posdoctoral}{España}{2015--2022}{\begin{cvitems}\item Investigación en evolución térmica de la litosfera oceánica y estadías en el Laboratorio de Cálculo Numérico.\end{cvitems}}
+\cventry{Kobe University}{Beca internacional de investigación JSPS}{Japón}{2027}{\begin{cvitems}\item Cooperación internacional en modelado geodinámico.\end{cvitems}}
+\end{cventries}
+
+\cvsection{Formación de recursos humanos}
+\begin{cvparagraph}
+Director de una Investigadora Asistente de CONICET (desde 2025). Codirector de una beca posdoctoral (2024) y de una tesis doctoral finalizada sobre fracturación natural en Vaca Muerta (2023). Director o codirector de 11 tesis de licenciatura, siete finalizadas entre 2015 y 2026 y cuatro en curso, en geología estructural, neotectónica, fracturación natural, geomorfología y geotermia.
+\end{cvparagraph}
+
+\Needspace{18\baselineskip}
+\cvsection{Proyectos seleccionados}
+\begin{cvhonors}
+\cvhonor{Modelos 3D de transferencia de esfuerzos entre segmentos de flat slab andinos (IR).}{AECT-2026-1-0080}{España}{2026}
+\cvhonor{Análisis tectónico-estructural mediante modelado análogo y numérico: recursos energéticos (co-IR).}{PIP 11220250100817CO}{Argentina}{2026--2029}
+\cvhonor{Potencial geotérmico de zonas volcánicas mediante modelos termomecánicos (IR).}{AECT / LINCGL}{España}{2024--2026}
+\cvhonor{Controles estructurales en sistemas volcánicos y generación de hidrocarburos (co-IR).}{Fundación Williams}{Argentina}{2025--2026}
+\cvhonor{Modelado de zonas de subducción y plumas mantélicas (IR).}{AECT-2024-2-0027}{España}{2024}
+\cvhonor{Geodinámica de la microplaca Adria, del manto a la superficie (co-IR).}{GEO3BCN--CSIC}{España}{2023}
+\cvhonor{Modelado numérico de la evolución térmica de la litosfera oceánica (IR).}{PICT 2015-1226}{Argentina}{2016}
+\end{cvhonors}
+
+\cvsection{Publicaciones seleccionadas}
+{\fontsize{7.35pt}{8.75pt}\bodyfontlight\color{text}
+\begin{multicols}{2}
+\raggedcolumns
+\begin{enumerate}
+\item Jara, P. et al., incl. \textbf{Likerman, J.} (2026). Analogue modelling to enhance spatial reasoning and understanding of tectonic processes in geoscience education. \emph{International Journal of Science Education}.
+\item Villarroel, M.A. et al., incl. \textbf{Likerman, J.} (2026). The role of compressional structures in the development of collapse calderas. \emph{Journal of Volcanology and Geothermal Research}, 108582.
+\item Gianni, G.M., Gallo, L.C., \textbf{Likerman, J.} et al. (2025). Slab underthrusting is the primary control on flat slab size. \emph{Science Advances}, 11(28).
+\item Correa-Luna, C., Yagupsky, D.L., \textbf{Likerman, J.} y Barcelona, H. (2025). Impact of large-scale structures on fracture network connectivity: Vaca Muerta. \emph{Tectonophysics}, 230640.
+\item Plotek, B., \textbf{Likerman, J.} y Cristallini, E. (2024). Geomechanical modeling of fault-propagation folds. \emph{Journal of Structural Geology}, 105064.
+\item Navarrete, C. et al., incl. \textbf{Likerman, J.} (2024). Massive Jurassic slab break-off revealed by a multidisciplinary reappraisal of the Chon Aike province. \emph{Earth-Science Reviews}, 249, 104651.
+\item Gianni, G.M., \textbf{Likerman, J.}, Navarrete, C.R., Gianni, C.R. y Zlotnik, S. (2023). Ghost-arc geochemical anomaly at a spreading ridge caused by supersized flat subduction. \emph{Nature Communications}, 14, 2083.
+\item Correa-Luna, C., Yagupsky, D.L., \textbf{Likerman, J.} y Barcelona, H. (2022). Natural fracture characterization of the Los Catutos Member, Vaca Muerta Formation. \emph{Journal of South American Earth Sciences}, 120, 104081.
+\item \textbf{Likerman, J.}, Zlotnik, S. y Li, C.-F. (2021). The effects of small-scale convection in the shallow lithosphere of the North Atlantic. \emph{Geophysical Journal International}, 227, 1512--1522.
+\item Luna, C.C., Yagupsky, D.L. y \textbf{Likerman, J.} (2019). Fracture network analysis of Yacoraite Formation in the Tres Cruces sub-basin. \emph{Journal of South American Earth Sciences}, 102446.
+\end{enumerate}
+\end{multicols}
+}
+\vspace{-1mm}
+\descriptionstyle{Autor o coautor de 20 artículos con referato. Lista completa disponible en Google Scholar y en el CV académico extenso.}
+
+\cvsection{Competencias}
+\begin{multicols}{2}
+\descriptionstyle{\textbf{Modelado y computación:} ASPECT, Underworld2, GOLEM, LaMEM, Python, MATLAB, R, MPI, Git y \LaTeX.}\par
+\descriptionstyle{\textbf{Geociencias:} modelado numérico y análogo, geología estructural, geomecánica, QGIS, GMT, PostGIS, cartografía, interpretación sísmica, UAV y trabajo de campo.}\par
+\columnbreak
+\descriptionstyle{\textbf{Docencia y liderazgo:} formación de grado y posgrado, dirección de estudiantes e investigadores, coordinación de proyectos y equipos de campo.}\par
+\descriptionstyle{\textbf{Idiomas:} español nativo, inglés fluido (C2), italiano (A2) y catalán (A2).}\par
+\end{multicols}
+
+\end{document}

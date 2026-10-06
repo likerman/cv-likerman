@@ -68,12 +68,29 @@ His work integrates structural geology, geomechanics, geodynamics, and geotherma
 
 ::: {.timeline-item}
 **Associate Professor — Department of Geological Sciences, UBA**  
-May 2026–present. Teaching Geostatistics and Geoinformatics.
+June 2026–present. Full-time appointment. Teaching Geostatistics, Geoinformatics, and Geological Surveying.
 :::
 
 ::: {.timeline-item}
 **Institutional Coordinator — IDEAN, CONICET–UBA**  
 September 2025–present. Member of the institute council since April 2024.
+:::
+
+## University teaching career
+
+::: {.timeline-item}
+**Associate Professor — Department of Geological Sciences, UBA**  
+June 2026–present. Geostatistics, Geoinformatics, and Geological Surveying.
+:::
+
+::: {.timeline-item}
+**Head Teaching Assistant (Jefe de Trabajos Prácticos) — Department of Geological Sciences, UBA**  
+March 2018–May 2026. Introduction to Geology, Geological Surveying, and Geostatistics.
+:::
+
+::: {.timeline-item}
+**First-Class Teaching Assistant (Ayudante de Primera) — Department of Geological Sciences, UBA**  
+June 2013–September 2017. Structural Geology, Geotectonics, and Field Tectonics.
 :::
 
 ## Education
