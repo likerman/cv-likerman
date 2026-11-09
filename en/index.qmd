@@ -118,20 +118,28 @@ Training in Structural Geology and MATLAB applied to Geosciences.
 ## Selected projects
 
 - **AECT-2026-1-0080** — Three-dimensional models of stress transfer between adjacent Andean flat slabs. Principal Investigator, 2026.
-- **PIP 11220250100817CO** — Tectonic-structural analysis through analogue and numerical modelling: contributions to energy resources. Co-PI, 2026–2029.
+- **PIP 11220250100817CO** — Tectonic-structural analysis through analogue and numerical modelling: contributions to energy resources. Researcher; PI: Daniel L. Yagupsky, 2026–2029.
+- **UBACyT 20020250200097BA** — Analogue and numerical modelling applied to energy resources. Researcher; PI: Ernesto O. Cristallini, 2026–2029.
 - **AECT-2025-1-0009** — Geothermal potential of volcanic zones. Principal Investigator, 2025.
-- **Williams Foundation** — Structural controls in volcanic systems and magmatic intrusions. Co-PI, 2025–2026.
+- **Williams Foundation** — Structural controls in volcanic systems and magmatic intrusions. Researcher; PI: Ernesto O. Cristallini, 2024–2025.
 - **LINCGL2024** — Thermomechanical assessment of geothermal potential in volcanic zones. Principal Investigator, 2024–2026.
 - **AECT-2024-2-0027** — Geodynamic modelling of subduction zones and mantle plumes. Principal Investigator, 2024.
-- **GEO3BCN–CSIC** — Geodynamics of the Adria microplate, from mantle to surface. Co-PI, 2023.
+- **PID2022-139943NB-I00** — Geodynamics of the Adria microplate, from mantle to surface. Researcher; PI: Ivone Jiménez-Munt, 2024–2027.
 - **AECT-2022-3-0023** — Geodynamic modelling of subduction zones. Principal Investigator, 2022.
+
+## International collaboration on geothermal research
+
+- Research visits to **GEO3BCN-CSIC** with Ivone Jiménez-Munt: August–September 2024, May–September 2025, and May–June 2026.
+- **Geo-RIN Madrid 2025**: joint contribution on the geothermal potential of Cerro Blanco using thermomechanical modelling (with I. Jiménez-Munt, G. Llorens, and colleagues).
+- **1st Argentine Meeting on Volcanology and Geothermal Energy, Salta 2026**: joint contribution on 3D thermo-hydrological modelling of Cerro Blanco (with I. Jiménez-Munt and colleagues).
+- Member of the **Geothermal Research and Innovation Network (Geo-RIN)** since 2026.
 
 ## Research supervision
 
 - Supervisor of Assistant Researcher **Berenice Plotek** since August 2025.
-- Co-supervisor of **Berenice Plotek's** postdoctoral research (2024) on fault-propagation folds.
+- Co-supervisor of **Berenice Plotek's** postdoctoral research (2023–2025) on fault-propagation folds.
 - Co-supervisor of **Clara Correa Luna's** PhD (2023) on natural fracturing in the Vaca Muerta Formation.
-- Supervisor or co-supervisor of eleven completed or ongoing undergraduate theses in tectonics, geothermal systems, numerical modelling, geomorphology, and structural geology.
+- Supervisor or co-supervisor of twelve completed or ongoing undergraduate theses in tectonics, geothermal systems, numerical modelling, geomorphology, and structural geology.
 
 ## Peer-reviewed publications
 

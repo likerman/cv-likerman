@@ -118,20 +118,28 @@ Formación en Geología Estructural y MATLAB aplicado a Geociencias.
 ## Proyectos seleccionados
 
 - **AECT-2026-1-0080** — Modelos tridimensionales de transferencia de esfuerzos entre segmentos de *flat slab* andinos. Investigador responsable, 2026.
-- **PIP 11220250100817CO** — Análisis tectónico-estructural mediante modelado análogo y numérico: contribuciones a los recursos energéticos. Co-investigador responsable, 2026–2029.
+- **PIP 11220250100817CO** — Análisis tectónico-estructural mediante modelado análogo y numérico: contribuciones a los recursos energéticos. Investigador; IP: Daniel L. Yagupsky, 2026–2029.
+- **UBACyT 20020250200097BA** — Modelado análogo y numérico orientado a recursos energéticos. Investigador; IP: Ernesto O. Cristallini, 2026–2029.
 - **AECT-2025-1-0009** — Potencial geotérmico de zonas volcánicas. Investigador responsable, 2025.
-- **Fundación Williams** — Controles estructurales en sistemas volcánicos e intrusiones magmáticas. Co-investigador responsable, 2025–2026.
+- **Fundación Williams** — Controles estructurales en sistemas volcánicos e intrusiones magmáticas. Investigador; IP: Ernesto O. Cristallini, 2024–2025.
 - **LINCGL2024** — Evaluación termomecánica del potencial geotérmico en zonas volcánicas. Investigador responsable, 2024–2026.
 - **AECT-2024-2-0027** — Modelado de zonas de subducción y plumas mantélicas. Investigador responsable, 2024.
-- **GEO3BCN–CSIC** — Geodinámica de la microplaca Adria, desde el manto hasta la superficie. Co-investigador responsable, 2023.
+- **PID2022-139943NB-I00** — Geodinámica de la microplaca Adria, desde el manto hasta la superficie. Investigador; IP: Ivone Jiménez-Munt, 2024–2027.
 - **AECT-2022-3-0023** — Modelado geodinámico de zonas de subducción. Investigador responsable, 2022.
+
+## Colaboración internacional en geotermia
+
+- Estancias de investigación en **GEO3BCN-CSIC** con Ivone Jiménez-Munt: agosto–septiembre de 2024, mayo–septiembre de 2025 y mayo–junio de 2026.
+- **Geo-RIN Madrid 2025**: comunicación conjunta sobre evaluación del potencial geotérmico de Cerro Blanco mediante modelado termomecánico (con I. Jiménez-Munt, G. Llorens y otros colaboradores).
+- **I Reunión Argentina de Volcanología y Geotermia, Salta 2026**: comunicación conjunta sobre modelado termo-hidrológico 3D de Cerro Blanco (con I. Jiménez-Munt y otros colaboradores).
+- Participante de la **Geothermal Research and Innovation Network (Geo-RIN)** desde 2026.
 
 ## Formación de recursos humanos
 
 - Dirección de la investigadora asistente **Berenice Plotek** desde agosto de 2025.
-- Codirección posdoctoral de **Berenice Plotek** (2024), sobre pliegues por propagación de falla.
+- Codirección posdoctoral de **Berenice Plotek** (2023–2025), sobre pliegues por propagación de falla.
 - Codirección doctoral de **Clara Correa Luna** (2023), sobre fracturación natural en la Formación Vaca Muerta.
-- Dirección o codirección de once tesis de licenciatura, concluidas o en curso, sobre tectónica, geotermia, modelado numérico, geomorfología y geología estructural.
+- Dirección o codirección de doce tesis de licenciatura, concluidas o en curso, sobre tectónica, geotermia, modelado numérico, geomorfología y geología estructural.
 
 ## Publicaciones con referato
 
